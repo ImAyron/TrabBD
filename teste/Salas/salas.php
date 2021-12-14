@@ -8,19 +8,19 @@
     <title>Document</title>
 </head>
 <body>
-   
-<ol>
-  
+   <a href="salaInsert.php">Inserir</a>
+
+  <br>
   <?php 
 
-    while($c = $maiorIdade ->fetch()){
-     echo "<li>" . $c["nome"]. "</li>";
+    while($c =$salas->fetch()){
+     echo  "Numero da sala: " . $c["numero"] . " Numero de assentos:" . $c["num_assentos"] ." Tipo:" . $c["tipo"]."<br>";
     }
   
 
   ?>
 
-</ol>
+
     
 </body>
 </html>

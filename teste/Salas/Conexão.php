@@ -2,7 +2,7 @@
 
 // CONFIGURAÇÃO COM O BANCO DE DADOS
 $endereco='localhost';
-$banco='TesteDB';
+$banco='CineControl';
 $usuario='postgres';
 $senha='1234';
 
@@ -17,14 +17,15 @@ try{
         echo 'falha';
         die($e->getMessage());
 }
-//INSTRUÇÕES SQL
+
+//INSTRUÇÕES SQL(QUERYS)
 
 
-$estudante =$pdo->query("SELECT * FROM estudante");
-$maiorIdade=$pdo->query("SELECT * FROM estudante where idade>18");
+$salas =$pdo->query("SELECT * FROM sala ORDER BY numero ASC");
+
 
 //var_dump($ingressos->fetchAll());
 
-require 'reservas.php';
+require 'salas.php';
 
 ?>
