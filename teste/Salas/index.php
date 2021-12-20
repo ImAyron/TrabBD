@@ -29,7 +29,7 @@ $salas =$pdo->query("SELECT * FROM sala ORDER BY numero ASC");
 
 //var_dump($ingressos->fetchAll());
 
-require 'salas.php';
+require 'view.php';
 
 
 ?>

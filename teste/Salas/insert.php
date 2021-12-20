@@ -18,7 +18,7 @@
         </div>
         <div class="col">
             <div class='form-group'>
-                <form action="inserirSala.php" method="post">
+                <form action="controllerInsert.php" method="post">
 
                     <label for="numero">Numero:</label>
                     <input type="text" name="numero" id="numero">

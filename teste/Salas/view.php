@@ -16,7 +16,7 @@
 
 </div>
 <div class="col">
- <a href="index.html"> <img class="img-thumbnail" src="../imagens/cineControl.png" alt=""></a>
+ <a href="../index.html"> <img class="img-thumbnail" src="../imagens/cineControl.png" alt=""></a>
 </div>
 </div>
 <div class="col " style="background-color: grey;">
@@ -77,6 +77,6 @@
   ?>
 
   </table>
-  <a href="salaInsert.php"><button class="btn btn-danger">Inserir Nova Sala</button></a>
+  <a href="insert.php"><button class="btn btn-danger">Inserir Nova Sala</button></a>
 </body>
 </html>
