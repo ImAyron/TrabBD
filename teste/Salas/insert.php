@@ -1,13 +1,11 @@
 <?php
-session_start();
-if (!isset($_SESSION['cargo']) || empty($_SESSION['cargo'])) {
-    echo "<br><a>Voce precrisa estar </a> <a href='../index.php'>logado</a>!</a><br>";
-    exit();
+require "../User/controllerLogin.php";
+if (booleanIsLogged()) {
+    header("index.php");
+    isLoggedIn();
+    hasCargo("ADMIN");
 }
-if ($_SESSION['cargo'] != "ADMIN") {
-    echo "<br><a>Você não tem permissão para fazer esta ação! </a> <a href='index.php'>Voltar</a></a><br>";
-    exit();
-}
+
 ?>
 
 <!DOCTYPE html>
@@ -85,10 +83,11 @@ if ($_SESSION['cargo'] != "ADMIN") {
                     <input class="form-control" type="text" name="num_assentos" id="num_assentos">
                     <p></p>
                     <label for="tipo">tipo:</label>
-                    <select  class="form-control"name="tipo" id="tipo">
+                    <select class="form-control" name="tipo" id="tipo">
+                        <option></option>
                         <option>2D</option>
                         <option>3D</option>
-                        
+
                     </select>
                     <input type="submit" value="Inserir">
 
