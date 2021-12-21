@@ -15,7 +15,7 @@
 
   <div class="row">
     <div class="col" style="background-color: black;">
-      <button style="text-align:center;">Logout</button>
+      <a href="./User/logout.php"><button style="text-align:center;">Logout</button></a>
     </div>
 
     <div class="col-10 " style="background-color: black;">
@@ -29,7 +29,7 @@
 
     <div class="row ">
 
-      <div class="col border border-dark">
+      <div 061">
         <br>
         <a class="d-flex justify-content-center text-center" href="index.php">Home</a>
         <br>
@@ -99,10 +99,9 @@
       </div>
 
     </div>
-    <div class="row"style="background-color: black;">
-    <div class="col"></div>
+    <div class="row" style="background-color: black;">
+      <div class="col"></div>
     </div>
-
 
   </div>
 
