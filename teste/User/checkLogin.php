@@ -7,7 +7,7 @@ $user = null;
 $email = $_POST["email"];
 $senha = $_POST['senha'];
 
-$stmt = $pdo->prepare("SELECT * FROM USUARIOS WHERE email=:email AND senha=:senha");
+$stmt = $pdo->prepare("SELECT * FROM usuarios WHERE email=:email AND senha=:senha");
 $stmt->bindParam(':email', $email);
 $stmt->bindParam(':senha', $senha);
 $stmt->execute();

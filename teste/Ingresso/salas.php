@@ -42,13 +42,13 @@
   <div class="col border border-dark">
 
     <br>
-    <a class="d-flex justify-content-center text-center" href="reservas.html">Tutores</a>
+    <a class="d-flex justify-content-center text-center" href="sessões.html">Tutores</a>
     <br>
   </div>
   <div class="col border border-dark">
 
     <br>
-    <a class="d-flex justify-content-center text-center" href="reservas.html">Reservas</a>
+    <a class="d-flex justify-content-center text-center" href="sessões.html">sessões</a>
     <br>
   </div>
 </div>

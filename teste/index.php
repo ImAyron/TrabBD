@@ -14,11 +14,14 @@
 
 
   <div class="row">
+    <div class="col" style="background-color: black;">
+      <button style="text-align:center;">Logout</button>
+    </div>
 
-    <div class="col-11 " style="background-color: black;">
+    <div class="col-10 " style="background-color: black;">
 
     </div>
-    <div class="col">
+    <div class="col" style="background-color: black;">
       <a href="index.php"> <img class="img-thumbnail" src="imagens/cineControl.png" alt=""></a>
     </div>
   </div>
@@ -46,13 +49,13 @@
       <div class="col border border-dark">
 
         <br>
-        <a class="d-flex justify-content-center text-center" href="Ingresso/index.php">Ingressos</a>
+        <a class="d-flex justify-content-center text-center" href="Ingressos/index.php">Ingressos</a>
         <br>
       </div>
       <div class="col border border-dark">
 
         <br>
-        <a class="d-flex justify-content-center text-center" href="reservas.html">Reservas</a>
+        <a class="d-flex justify-content-center text-center" href="sessões.html">Sessões</a>
         <br>
       </div>
     </div>
@@ -83,12 +86,21 @@
             <label class="form-check-label" for="exampleCheck1">Lembrar Senha</label>
           </div>
           <input type="submit" value="Login">
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
         </form>
       </div>
 
       <div class="col" style="background-color: black;">
       </div>
 
+    </div>
+    <div class="row"style="background-color: black;">
+    <div class="col"></div>
     </div>
 
 

@@ -43,26 +43,28 @@
   <div class="col border border-dark">
 
     <br>
-    <a class="d-flex justify-content-center text-center" href="reservas.html">Tutores</a>
+    <a class="d-flex justify-content-center text-center" href="../Ingressos/index.php">Ingressos</a>
     <br>
   </div>
   <div class="col border border-dark">
 
     <br>
-    <a class="d-flex justify-content-center text-center" href="reservas.html">Reservas</a>
+    <a class="d-flex justify-content-center text-center" href="sessões.html">sessões</a>
     <br>
   </div>
 </div>
 </div>
 </div>
 
-  <br>
+ 
 
   <table class="table table-striped table-dark">
   <tr>
   <th scope="col">Numero</th>
       <th scope="col">qtd assentos</th>
       <th scope="col">Tipo</th>
+      <th scope="col">Excluir</th>
+      <th scope="col">Editar</th>
       
   </tr>
  
@@ -70,8 +72,8 @@
    
   <?php 
 
-    while($c =$salas->fetch()){
-     echo  "<tr><td>Numero da sala: " . $c["numero"] ."</td>". " <td>Numero de assentos:" . $c["num_assentos"] ."</td>"." <td>Tipo:" . $c["tipo"]."<br>"."</td>  </tr>";
+    while($c =$tabela->fetch()){
+     echo  "<tr><td>Numero da sala: " . $c["numero"] ."</td>". " <td>Numero de assentos:" . $c["num_assentos"] ."</td>"." <td>Tipo:" . $c["tipo"]."<br></td> "."<td><button class='btn btn-secondary'> Excluir</button></td>"."<td><button class='btn btn-primary'> Editar</button></td>"." </tr>";
     }
   
   ?>

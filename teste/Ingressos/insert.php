@@ -78,16 +78,17 @@ if ($_SESSION['cargo'] != "ADMIN") {
             <div class='form-group'>
                 <form action="controllerInsert.php" method="post">
 
-                    <label for="numero">Numero:</label>
-                    <input class="form-control" type="text" name="numero" id="numero">
+                    <label for="numero">ID:</label>
+                    <input class="form-control" type="text" name="id" id="id">
                     <p></p>
-                    <label for="num_assentos">num_assentos:</label>
-                    <input class="form-control" type="text" name="num_assentos" id="num_assentos">
+                    <label for="num_assentos">SID:</label>
+                    <input class="form-control" type="text" name="sid" id="sid">
                     <p></p>
                     <label for="tipo">tipo:</label>
                     <select  class="form-control"name="tipo" id="tipo">
-                        <option>2D</option>
-                        <option>3D</option>
+                        <option>meia</option>
+                        <option>inteira</option>
+                        
                         
                     </select>
                     <input type="submit" value="Inserir">

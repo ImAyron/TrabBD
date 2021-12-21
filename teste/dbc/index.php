@@ -4,7 +4,7 @@
 $endereco='localhost';
 $banco='CineControl';
 $usuario='postgres';
-$senha='Tazbolada1';
+$senha='1234';
 
 
 try{

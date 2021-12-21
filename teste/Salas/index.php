@@ -4,7 +4,7 @@ require '../dbc/index.php';
 
 
 // salas
-$salas = $pdo->query("SELECT * FROM sala ORDER BY numero ASC");
+$tabela = $pdo->query("SELECT * FROM sala ORDER BY numero ASC");
 
 
 require 'view.php';
