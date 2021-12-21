@@ -15,7 +15,7 @@
 
 </div>
 <div class="col">
- <a href="index.html"> <img class="img-thumbnail" src="../imagens/cineControl.png" alt=""></a>
+ <a href="index.php"> <img class="img-thumbnail" src="../imagens/cineControl.png" alt=""></a>
 </div>
 </div>
 <div class="col " style="background-color: grey;">
@@ -24,7 +24,7 @@
 
   <div class="col border border-dark">
     <br>
-    <a class="d-flex justify-content-center text-center" href="../index.html">Home</a>
+    <a class="d-flex justify-content-center text-center" href="../index.php">Home</a>
     <br>
   </div>
   <div class="col border border-dark">
