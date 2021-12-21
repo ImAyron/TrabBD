@@ -15,7 +15,7 @@ $stmt->execute();
 $stmt = $stmt->fetch();
 
 if (empty($stmt)) {
-  echo "erro";
+  echo "<script>alert('Login ou senha incorretos!'); location.replace('../index.php');</script>";
   die();
 } else {
 

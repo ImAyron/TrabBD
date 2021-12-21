@@ -2,27 +2,34 @@
 
 function booleanIsLogged()
 {
-    if (!isset($_SESSION['cargo']) || empty($_SESSION['cargo'])) {
-        return false;
+    if (session_id() == '') {
+        session_start();
     }
-    return true;
+    if (!isset($_SESSION['cargo']) || empty($_SESSION['cargo'])) {
+        return true;
+    }
+    return false;
 }
 
 function isLoggedIn()
 {
-    session_start();
+    if (session_id() == '') {
+        session_start();
+    }
     if (!isset($_SESSION['cargo']) || empty($_SESSION['cargo'])) {
-        echo "<br><a>Voce precrisa estar </a> <a href='../index.php'>logado</a>!</a><br>";
+        echo "<script>alert('Você precisa estar logado para realizar esta ação!'); location.replace('../index.php');</script>";
         exit();
     }
 }
 
 function hasCargo($cargo)
 {
+    if (session_id() == '') {
+        session_start();
+    }
+    print_r($_SESSION);
     if ($_SESSION['cargo'] != $cargo) {
-        echo "<br><a>Você não tem permissão para fazer esta ação! </a> <a href='index.php'>Voltar</a></a><br>";
+        echo "<script>alert('Você não possui a permissão necessária para realizar esta ação!'); location.replace('../index.php');</script>";
         exit();
     }
 }
-
-
