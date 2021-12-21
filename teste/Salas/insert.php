@@ -1,3 +1,15 @@
+<?php
+session_start();
+if (!isset($_SESSION['cargo']) || empty($_SESSION['cargo'])) {
+    echo "<br><a>Voce precrisa estar </a> <a href='../index.php'>logado</a>!</a><br>";
+    exit();
+}
+if ($_SESSION['cargo'] != "ADMIN") {
+    echo "<br><a>Você não tem permissão para fazer esta ação! </a> <a href='index.php'>Voltar</a></a><br>";
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
