@@ -14,8 +14,9 @@
 
 
   <div class="row">
-    <div class="col" style="background-color: black;">
-      <a href="./User/logout.php"><button style="text-align:center;">Logout</button></a>
+    <div class="d-flex justify-content-center text-center col " style="background-color: black;">
+   
+      <a href="./User/logout.php"> <br><button class='btn btn-danger'>Logout</button></a>
     </div>
 
     <div class="col-10 " style="background-color: black;">
@@ -29,7 +30,7 @@
 
     <div class="row ">
 
-      <div 061">
+      <div class="col border border-dark">
         <br>
         <a class="d-flex justify-content-center text-center" href="index.php">Home</a>
         <br>

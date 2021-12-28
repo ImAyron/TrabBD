@@ -12,8 +12,8 @@
 </head>
 
 <body style="background-color: black;">
-  <div class="col" style="background-color: black;">
-    <a href="../User/logout.php"><button style="text-align:center;">Log Out</button></a>
+  <div class="col  style="background-color: black;>
+    <a href="../User/logout.php"><button class='btn btn-danger'>Log Out</button></a>
   </div>
   <div class="row">
 
@@ -78,7 +78,18 @@
     <?php
 
     while ($c = $tabela->fetch()) {
-      echo  "<tr><td>" . $c["numero"] . "</td>" . " <td>" . $c["num_assentos"] . "</td>" . " <td>" . $c["tipo"] . "<br></td> " . "<td><button class='btn btn-secondary'> Excluir</button></td>" . "<td><button class='btn btn-primary'> Editar</button></td>" . " </tr>";
+      $phpVariable=$c["numero"];
+      echo  "<tr><td>" . $c["numero"] . "</td>" .
+            "<td>" . $c["num_assentos"] . "</td>" . 
+            "<td>" . $c["tipo"] . "<br></td> " . 
+            "<td><a href='/TRABBD/teste/Salas/controllerDelete.php?numero=$phpVariable'><button class='btn btn-secondary'> Excluir</button></a></td>" . 
+            "<td><a href='/TRABBD/teste/Salas/edit.php?numero=$phpVariable'> <button class='btn btn-primary'>Editar</button></a></td>" .
+            //"<td> <form name='Cadastro' action='/TRABBD/teste/Salas/edit.php' method='GET'> 
+            //</form>
+           // </td>".
+           "</tr>";
+ 
+           
     }
 
     ?>
