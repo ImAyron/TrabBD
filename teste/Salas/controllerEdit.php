@@ -12,12 +12,11 @@ try {
 
     $pdo->beginTransaction();
 
-    $stmt = $pdo->prepare("UPDATE SALA SET num_assentos=:num_assentos, tipo=:tipo, eid=:eid WHERE numero=:numero");
+    $stmt = $pdo->prepare("UPDATE SALA SET num_assentos=:num_assentos, tipo=:tipo WHERE numero=:numero");
 
     $stmt->bindParam(":numero", $numero);
     $stmt->bindParam(":num_assentos", $num_assentos);
     $stmt->bindParam(":tipo", $tipo);
-    $stmt->bindParam(":eid", $eid);
 
     $stmt->execute();
 
@@ -29,5 +28,3 @@ try {
 
 header('location:index.php');
 exit();
-
-?>

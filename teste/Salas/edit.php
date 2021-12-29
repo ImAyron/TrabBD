@@ -1,6 +1,5 @@
 <?php
 require "../User/controllerLogin.php";
-require "./querys.php";
 if (booleanIsLogged()) {
   header("index.php");
   isLoggedIn();
