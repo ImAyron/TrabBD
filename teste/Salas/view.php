@@ -86,7 +86,7 @@
           <th scope="col">Numero</th>
           <th scope="col">qtd assentos</th>
           <th scope="col">Tipo</th>
-          <th scope="col">Excluir</th>
+  
           <th scope="col">Editar</th>
 
         </tr>
@@ -107,7 +107,7 @@
           echo  "<tr><td>" . $c["numero"] . "</td>" .
             "<td>" . $c["num_assentos"] . "</td>" .
             "<td>" . $c["tipo"] . "<br></td> " .
-            "<td><a href='/TRABBD/teste/Salas/controllerDelete.php?numero=$numero'><button class='btn btn-secondary'> Excluir</button></a></td>" .
+            
             "<td><a href='/TRABBD/teste/Salas/edit.php?&numero=$numero&num_assentos= $num_assentos&tipo=$tipo&estabelecimento=$estabelecimento'><button class='btn btn-primary'>Editar</button></a></td>" ."</tr>";
         }
 

@@ -105,7 +105,7 @@ $estabelecimento = $_GET['estabelecimento'];
           <br><br>
           <label for="numero">Número da sala:</label>
           <input disabled class="form-control" type="number" value= "<?=$numero ?>" placeholder="<?= $numero ?>"  id="numero">
-         
+              
                    <?php
                     
                      $phpVariable = $_GET['numero'];
@@ -124,8 +124,9 @@ $estabelecimento = $_GET['estabelecimento'];
           </select>
           <br>
           <input class='btn btn-danger' type="submit" value="Inserir">
+          <a href="controllerDelete.php?numero=<?=$phpVariable?>"><button class='btn btn-primary'>Excluir</button></a>
         </form>
-
+       
       </div>
     </div>
     <div class="col">
