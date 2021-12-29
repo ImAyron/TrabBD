@@ -14,16 +14,17 @@
 
 
   <div class="row">
-    <div class="d-flex justify-content-center text-center col " style="background-color: black;">
-   
-      <a href="./User/logout.php"> <br><button class='btn btn-danger'>Logout</button></a>
+    <div class="d-flex justify-content-center text-center col " style="background-color:white;">
+    <a href="index.php"> <img class="img-thumbnail" src="imagens/cineControl.png" alt=""></a>
+     
     </div>
 
-    <div class="col-10 " style="background-color: black;">
+    <div class="col-10 " style="background-color: white;">
 
     </div>
-    <div class="col" style="background-color: black;">
-      <a href="index.php"> <img class="img-thumbnail" src="imagens/cineControl.png" alt=""></a>
+    <div class=" col" style="background-color: white;">
+    <a style='color:black;font-weight: bold;'href="./User/logout.php"><p><br>Deslogar</p></a>
+     
     </div>
   </div>
   <div class="col " style="background-color: grey;">
@@ -65,19 +66,22 @@
   <div class="fundo">
 
     <div class="row">
-      <div class="col">
+      <div class="col"style="background-color: white;">
       </div>
-      <div class="col " style="background-color: grey;">
+      <div class="col " style="background-color: #c4baba;">
         <p></p>
+        <br>
         <img class="rounded mx-auto d-block" src="imagens/login.png" alt="">
 
 
         <form action="./User/checkLogin.php" method="post">
           <div class="form-group">
+            <br>
             <label for="exampleInputEmail1">Email</label>
             <input type="email" class="form-control" id="email" name='email' aria-describedby="email" placeholder="">
 
           </div>
+          <br>
           <div class="form-group">
             <label for="exampleInputPassword1">Senha</label>
             <input type="password" class="form-control" id="senha" name='senha' placeholder="">
@@ -91,16 +95,15 @@
           <br>
           <br>
           <br>
-          <br>
-          <br>
+       
         </form>
       </div>
 
-      <div class="col" style="background-color: black;">
+      <div class="col" style="background-color: white;">
       </div>
 
     </div>
-    <div class="row" style="background-color: black;">
+    <div class="row" style="background-color: white;">
       <div class="col"></div>
     </div>
 

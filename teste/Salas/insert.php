@@ -19,63 +19,70 @@ if (booleanIsLogged()) {
     <link rel=" stylesheet" type='text/css' href="../css/trab.css">
     <title>Inserir Salas</title>
 </head>
+<body>
+  <div class="row">
+    <div class="d-flex justify-content-center text-center col " style="background-color:white;">
+      <a href="../index.php"> <img class="img-thumbnail" src="../imagens/cineControl.png" alt=""></a>
 
-<body style="background-color: black;color:white;">
+    </div>
+
+    <div class="col-10 " style="background-color: white;">
+
+    </div>
+    <div class=" col" style="background-color: white;">
+      <a style='color:black;font-weight: bold;' href="../User/logout.php">
+        <p><br>Deslogar</p>
+      </a>
+
+    </div>
+  </div>
+  <div class="col " style="background-color: grey;">
+
+    <div class="row ">
+
+      <div class="col border border-dark">
+        <br>
+        <a class="d-flex justify-content-center text-center" href="../index.php">Home</a>
+        <br>
+      </div>
+      <div class="col border border-dark">
+
+        <br>
+        <a class="d-flex justify-content-center text-center" href="index.php">Salas</a>
+        <br>
+      </div>
+      <div class="col border border-dark">
+
+        <br>
+        <a class="d-flex justify-content-center text-center" href="Filmes/index.php">Filmes</a>
+        <br>
+      </div>
+      <div class="col border border-dark">
+
+        <br>
+        <a class="d-flex justify-content-center text-center" href="Ingressos/index.php">Ingressos</a>
+        <br>
+      </div>
+      <div class="col border border-dark">
+
+        <br>
+        <a class="d-flex justify-content-center text-center" href="sessões.html">Sessões</a>
+        <br>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
     <div class="row">
-
-        <div class="col-11">
-
-        </div>
-        <div class="col">
-            <a href="../index.php"> <img class="img-thumbnail" src="../imagens/cineControl.png" alt=""></a>
-        </div>
-    </div>
-    <div class="col " style="background-color: grey;">
-
-        <div class="row ">
-
-            <div class="col border border-dark">
-                <br>
-                <a class="d-flex justify-content-center text-center" href="../index.php">Home</a>
-                <br>
-            </div>
-            <div class="col border border-dark">
-
-                <br>
-                <a class="d-flex justify-content-center text-center" href="../Salas/index.php">Salas</a>
-                <br>
-            </div>
-            <div class="col border border-dark">
-
-                <br>
-                <a class="d-flex justify-content-center text-center" href="Filmes/index.php">Filmes</a>
-                <br>
-            </div>
-            <div class="col border border-dark">
-
-                <br>
-                <a class="d-flex justify-content-center text-center" href="sessões.html">Tutores</a>
-                <br>
-            </div>
-            <div class="col border border-dark">
-
-                <br>
-                <a class="d-flex justify-content-center text-center" href="sessões.html">sessões</a>
-                <br>
-            </div>
-        </div>
-    </div>
-    </div>
-
-
-    <div class="row">
         <div class="col">
 
         </div>
-        <div class="col-8">
+        <div class="col-8" style="color:black;font-weight: bold;">
             <div class='form-group'>
                 <form action="controllerInsert.php" method="post">
-
+                    <br><br>
                     <label for="numero">Numero:</label>
                     <input class="form-control" type="text" name="numero" id="numero">
                     <p></p>
@@ -89,10 +96,11 @@ if (booleanIsLogged()) {
                         <option>3D</option>
 
                     </select>
-                    <input type="submit" value="Inserir">
-
+                    <br>
+                    <input class='btn btn-danger'type="submit" value="Inserir">
+                   
                 </form>
-
+                
             </div>
         </div>
         <div class="col">
