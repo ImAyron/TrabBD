@@ -6,21 +6,13 @@ require 'index.php';
 $numero=$_GET['numero'];
 echo $numero;
 
-try {
+$stmt= $pdo->prepare("DELETE FROM sala  where numero=:numero;");
 
-    $pdo->beginTransaction();
+$stmt->bindParam(':numero',$numero);
 
-    $stmt = $pdo->prepare("DELETE FROM SALA WHERE numero=:numero");
-
-    $stmt->bindParam(":numero", $numero);
-    $stmt->execute();
-
-    $pdo->commit();
-} catch (Exception $error) {
-    $pdo->rollBack();
-    die("Erro ao deletar! " . $error->getMessage());
-}
+$stmt->execute();
 
 header('location:index.php');
 exit();
 
+?>
