@@ -94,20 +94,25 @@
 
 
         <?php
+        require "./querys.php";
+
+        $sala =  filtroTodasAsSalas();
 
         while ($c = $tabela->fetch()) {
-          $phpVariable = $c["numero"];
+          $numero = $c["numero"];
           $num_assentos=$c["num_assentos"];
           $tipo=$c["tipo"];
+          $estabelecimento=$c["eid"];
           
           echo  "<tr><td>" . $c["numero"] . "</td>" .
             "<td>" . $c["num_assentos"] . "</td>" .
             "<td>" . $c["tipo"] . "<br></td> " .
-            "<td><a href='/TRABBD/teste/Salas/controllerDelete.php?numero=$phpVariable'><button class='btn btn-secondary'> Excluir</button></a></td>" .
+            "<td><a href='/TRABBD/teste/Salas/controllerDelete.php?numero=$numero'><button class='btn btn-secondary'> Excluir</button></a></td>" .
             "<td><a href='/TRABBD/teste/Salas/edit.php?
-            numero=$phpVariable
+            &numero=$numero
             &num_assentos= $num_assentos
-            &tipo=$tipo'>
+            &tipo=$tipo
+            &estabelecimento=$estabelecimento'>
 
              <button class='btn btn-primary'>Editar</button></a></td>" .
             "</tr>";

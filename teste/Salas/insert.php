@@ -1,9 +1,9 @@
 <?php
 require "../User/controllerLogin.php";
 if (booleanIsLogged()) {
-    header("index.php");
-    isLoggedIn();
-    hasCargo("ADMIN");
+  header("index.php");
+  isLoggedIn();
+  hasCargo("ADMIN");
 }
 
 ?>
@@ -12,23 +12,25 @@ if (booleanIsLogged()) {
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel=" stylesheet" type='text/css' href="../css/trab.css">
-    <style type="text/css">
-    a{
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel=" stylesheet" type='text/css' href="../css/trab.css">
+  <style type="text/css">
+    a {
       text-decoration: none;
       color: white;
     }
-    a:hover{
+
+    a:hover {
       color: black;
     }
   </style>
-    <title>Inserir Salas</title>
+  <title>Inserir Salas</title>
 </head>
+
 <body>
   <div class="row">
     <div class="d-flex justify-content-center text-center col " style="background-color:white;">
@@ -85,39 +87,38 @@ if (booleanIsLogged()) {
 
 
 
-    <div class="row">
-        <div class="col">
-
-        </div>
-        <div class="col-8" style="color:black;font-weight: bold;">
-            <div class='form-group'>
-                <form action="controllerInsert.php" method="post">
-                    <br><br>
-                    <label for="numero">Numero:</label>
-                    <input class="form-control" type="text" name="numero" id="numero">
-                    <p></p>
-                    <label for="num_assentos">num_assentos:</label>
-                    <input class="form-control" type="text" name="num_assentos" id="num_assentos">
-                    <p></p>
-                    <label for="tipo">tipo:</label>
-                    <select class="form-control" name="tipo" id="tipo">
-                        <option></option>
-                        <option>2D</option>
-                        <option>3D</option>
-
-                    </select>
-                    <br>
-                    <input class='btn btn-danger'type="submit" value="Inserir">
-                   
-                </form>
-                
-            </div>
-        </div>
-        <div class="col">
-
-        </div>
+  <div class="row">
+    <div class="col">
 
     </div>
+    <div class="col-8" style="color:black;font-weight: bold;">
+      <div class='form-group'>
+        <form action="controllerInsert.php" method="post">
+          <br><br>
+          <label for="numero">Número da sala:</label>
+          <input class="form-control" type="number" name="numero" id="numero">
+          <p></p>
+          <label for="num_assentos">Número de assentos:</label>
+          <input class="form-control" type="number" name="num_assentos" id="num_assentos">
+          <p></p>
+          <label for="tipo">Tipo de sala:</label>
+          <select class="form-control" name="tipo" id="tipo">
+            <option selected disabled >Selecione o tipo</option>
+            <option value="2D">2D</option>
+            <option value="3D">3D</option>
+          </select>
+          <br>
+          <input class='btn btn-danger' type="submit" value="Inserir">
+
+        </form>
+
+      </div>
+    </div>
+    <div class="col">
+
+    </div>
+
+  </div>
 
 </body>
 

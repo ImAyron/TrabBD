@@ -4,9 +4,9 @@ function filtroTodasAsSalas()
 {
     require '../dbc/index.php';
 
-    $stmt = $pdo->query("SELECT * FROM SALA ORDER BY numero");
+    $stmt = $pdo->query("SELECT * FROM SALA ORDER BY numero ASC");
 
-    return $stmt->fetchAll();
+    return $stmt;
 }
 
 function inserirSalas($numero, $num_assentos, $tipo, $eid)
@@ -33,7 +33,7 @@ function inserirSalas($numero, $num_assentos, $tipo, $eid)
     }
 }
 
-function editarSala($numero, $num_assentos, $tipo, $eid)
+function queryEditarSala($numero, $num_assentos, $tipo, $eid)
 {
     require '../dbc/index.php';
 
