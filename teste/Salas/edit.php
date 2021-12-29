@@ -124,9 +124,9 @@ $estabelecimento = $_GET['estabelecimento'];
           </select>
           <br>
           <input class='btn btn-danger' type="submit" value="Inserir">
-          <a href="controllerDelete.php?numero=<?=$phpVariable?>"><button class='btn btn-primary'>Excluir</button></a>
+         
         </form>
-       
+        <a href="controllerDelete.php?numero=<?=$phpVariable?>"><button class='btn btn-primary'>Excluir</button></a>
       </div>
     </div>
     <div class="col">
