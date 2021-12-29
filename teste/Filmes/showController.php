@@ -2,19 +2,14 @@
 
 require 'index.php';
 
-
-$nome_original=$_POST['nome_original'];
-
-$stmt->bindParam(':nome_original',$nome_original);
-
-$tabela2= $pdo->query("SELECT * FROM FILME where :nome_original = nome_original");
-
-var_dump($tabela2);
+$nome_original=$_GET['nome_original'];
 
 
-$stmt->execute();
 
-header('location:index.php');
+$tabela= $pdo->query("SELECT * FROM FILME where nome_original = '$nome_original' ");
+
+
+//header('location:show.php');
 exit();
 
 ?>

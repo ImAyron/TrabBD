@@ -96,7 +96,7 @@
         <?php
         require "./querys.php";
 
-        $sala =  filtroTodasAsSalas();
+        $sala = filtroTodasAsSalas();
 
         while ($c = $tabela->fetch()) {
           $numero = $c["numero"];

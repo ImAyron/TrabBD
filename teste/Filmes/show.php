@@ -96,36 +96,13 @@ $nome_original=$_GET['nome_original'];
         </tr>
 
 
-        <form action="showController.php" method='POST'>
-           
-        <input type="hidden" name='nome_original'value="<?=$nome_original?>" >
 
         </form>
 
         <?php
        
        
-        while ($c = $tabela2->fetch()) {
-          $phpVariable = $c["nome_original"];
-          //$num_assentos=$c["num_assentos"];
-          //$tipo=$c["tipo"];
-          
-          echo  "<tr><td>" . $c["nome_exibido"] . "</td>" .
-            "<td>" . $c["diretor"] . "</td>" .
-            "<td>" . $c["sinopse"] . "<br></td> " .
-            //"<td><a href='/TRABBD/teste/Salas/controllerDelete.php?numero=$phpVariable'><button class='btn btn-secondary'> Excluir</button></a></td>" .
-           // "<td><a href='/TRABBD/teste/Salas/edit.php?
-            //numero=$phpVariable
-           // &num_assentos= $num_assentos
-           // &tipo=$tipo'>
-
-             //<button class='btn btn-primary'>Editar</button></a></td>" .
-
-             "<td>" . $c["categorias"] . "<br></td> " .
-             "<td>" . $c["duracao"] . "<br></td> " .
-             "<td>" . "<a href='showController.php?nome_original=$phpVariable'><button>Exibir</button></a>" . "<br></td> " .
-            "</tr>";
-        }
+       
 
         ?>
 

@@ -86,6 +86,8 @@
           <th scope="col">Sinopse</th>
           <th scope="col">Categoria</th>
           <th scope="col">Duração</th>
+          <th scope="col">Etária</th>
+          <th scope="col">Atores</th>
           <th scope="col">Exibir</th>
 
         </tr>
@@ -112,7 +114,9 @@
 
              "<td>" . $c["categorias"] . "<br></td> " .
              "<td>" . $c["duracao"] . "<br></td> " .
-             "<td>" . "<a href='show.php?nome_original=$phpVariable'><button>Exibir</button></a>" . "<br></td> " .
+             "<td>" . $c["classificacao_etaria"] . "<br></td> " .
+             "<td>" . $c["astros"] . "<br></td> " .
+             "<td>" . "<a href='edit.php?nome_original=$phpVariable'><button>Editar</button></a>" . "<br></td> " .
             "</tr>";
         }
 

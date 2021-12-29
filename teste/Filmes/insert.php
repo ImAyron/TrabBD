@@ -92,14 +92,27 @@ if (booleanIsLogged()) {
             <div class='form-group'>
                 <form action="controllerInsert.php" method="post">
                     <br><br>
-                    <label for="numero">Numero:</label>
-                    <input class="form-control" type="text" name="numero" id="numero">
+                    <label for="nome_exibido">Nome Exibido:</label>
+                    <input class="form-control" type="text" name="nome_exibido" id="nome_exibido">
                     <p></p>
-                    <label for="num_assentos">num_assentos:</label>
-                    <input class="form-control" type="text" name="num_assentos" id="num_assentos">
+                    <label for="nome_original">Nome Original:</label>
+                    <input class="form-control" type="text" name="nome_original" id="nome_original">
                     <p></p>
-                    <label for="tipo">tipo:</label>
-                    <select class="form-control" name="tipo" id="tipo">
+                    <label for="diretor">diretor:</label>
+                    <input class="form-control" type="text" name="diretor" id="diretor">
+                    <p></p>
+                    <label for="sinopse">sinopse:</label>
+                    <input class="form-control" type="text" name="sinopse" id="sinopse">
+                    <p></p>
+                    <label for="etaria">Faixa etaria:</label>
+                    <input class="form-control" type="text" name="etaria" id="etaria">
+                    <p></p>
+                    <label for="astros">Astros:</label>
+                    <input class="form-control" type="text" name="astros" id="astros">
+                    <p></p>
+                    
+                    <label for="categorias">categorias:</label>
+                    <select class="form-control" name="categorias" id="categorias">
                         <option></option>
                         <option>2D</option>
                         <option>3D</option>
