@@ -2,10 +2,7 @@
 
 require '../dbc/index.php';
 
-
-// salas
-$tabela = $pdo->query("SELECT * FROM sala ORDER BY numero ASC");
-
+$stmt = $pdo->query("SELECT * FROM SALA ORDER BY eid,numero ASC");
 
 require 'view.php';
 

@@ -8,15 +8,25 @@ $num_assentos=$_POST['num_assentos'];
 $tipo=$_POST['tipo'];
 
 
-$stmt= $pdo->prepare("UPDATE sala SET  num_assentos=:num_assentos,tipo=:tipo where numero=:numero;");
+try {
 
-$stmt->bindParam(':numero',$numero);
-$stmt->bindParam(':num_assentos',$num_assentos);
-$stmt->bindParam(':tipo',$tipo);
+    $pdo->beginTransaction();
 
-$stmt->execute();
+    $stmt = $pdo->prepare("UPDATE SALA SET num_assentos=:num_assentos, tipo=:tipo, eid=:eid WHERE numero=:numero");
+
+    $stmt->bindParam(":numero", $numero);
+    $stmt->bindParam(":num_assentos", $num_assentos);
+    $stmt->bindParam(":tipo", $tipo);
+    $stmt->bindParam(":eid", $eid);
+
+    $stmt->execute();
+
+    $pdo->commit();
+} catch (Exception $error) {
+    $pdo->rollBack();
+    die("Erro! " . $error->getMessage());
+}
 
 header('location:index.php');
 exit();
 
-?>
