@@ -104,7 +104,15 @@ $estabelecimento = $_GET['estabelecimento'];
         <form action="./controllerEdit.php" method="post">
           <br><br>
           <label for="numero">Número da sala:</label>
-          <input disabled class="form-control" type="number" placeholder="<?= $numero ?>" name="num_assentos" id="num_assentos">
+          <input disabled class="form-control" type="number" value= "<?=$numero ?>" placeholder="<?= $numero ?>"  id="numero">
+         
+                   <?php
+                    
+                     $phpVariable = $_GET['numero'];
+                     
+                   ?>
+                    <input type="hidden" name="numero" value="<?=$phpVariable?>" />
+
           <p></p>
           <label for="num_assentos">Número de assentos:</label>
           <input class="form-control" type="number" placeholder="<?= $num_assentos ?>" name="num_assentos" id="num_assentos">
