@@ -8,6 +8,15 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel=" stylesheet" type='text/css' href="../css/trab.css">
+  <style type="text/css">
+    a{
+      text-decoration: none;
+      color: white;
+    }
+    a:hover{
+      color: black;
+    }
+  </style>
   <title>Document</title>
 </head>
 
@@ -46,7 +55,7 @@
       <div class="col border border-dark">
 
         <br>
-        <a class="d-flex justify-content-center text-center" href="Filmes/index.php">Filmes</a>
+        <a class="d-flex justify-content-center text-center" href="../Filmes/index.php">Filmes</a>
         <br>
       </div>
       <div class="col border border-dark">

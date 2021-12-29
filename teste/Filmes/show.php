@@ -1,3 +1,8 @@
+<?php
+$nome_original=$_GET['nome_original'];
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,7 +66,7 @@
       <div class="col border border-dark">
 
         <br>
-        <a class="d-flex justify-content-center text-center" href="Ingressos/index.php">Ingressos</a>
+        <a class="d-flex justify-content-center text-center" href="../Ingressos/index.php">Ingressos</a>
         <br>
       </div>
       <div class="col border border-dark">
@@ -91,10 +96,16 @@
         </tr>
 
 
+        <form action="showController.php" method='POST'>
+           
+        <input type="hidden" name='nome_original'value="<?=$nome_original?>" >
+
+        </form>
 
         <?php
-
-        while ($c = $tabela->fetch()) {
+       
+       
+        while ($c = $tabela2->fetch()) {
           $phpVariable = $c["nome_original"];
           //$num_assentos=$c["num_assentos"];
           //$tipo=$c["tipo"];
@@ -112,7 +123,7 @@
 
              "<td>" . $c["categorias"] . "<br></td> " .
              "<td>" . $c["duracao"] . "<br></td> " .
-             "<td>" . "<a href='show.php?nome_original=$phpVariable'><button>Exibir</button></a>" . "<br></td> " .
+             "<td>" . "<a href='showController.php?nome_original=$phpVariable'><button>Exibir</button></a>" . "<br></td> " .
             "</tr>";
         }
 
