@@ -9,11 +9,12 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel=" stylesheet" type='text/css' href="../css/trab.css">
   <style type="text/css">
-    a{
+    a {
       text-decoration: none;
       color: white;
     }
-    a:hover{
+
+    a:hover {
       color: black;
     }
   </style>
@@ -80,29 +81,29 @@
 
     </div>
     <div class="col-8">
-    <br>
+      <br>
       <table class="table table-active table-striped ">
         <tr>
           <th scope="col">Numero</th>
           <th scope="col">qtd assentos</th>
           <th scope="col">Tipo</th>
-  
+          <th scope="col">Estabelecimento</th>
           <th scope="col">Editar</th>
-
         </tr>
 
         <?php
 
         while ($c = $tabela->fetch()) {
           $numero = $c["numero"];
-          $num_assentos=$c["num_assentos"];
-          $tipo=$c["tipo"];
-          $estabelecimento=$c["eid"];
-          
+          $num_assentos = $c["num_assentos"];
+          $tipo = $c["tipo"];
+          $estabelecimento = $c["eid"];
+
           echo  "<tr><td>" . $c["numero"] . "</td>" .
             "<td>" . $c["num_assentos"] . "</td>" .
-            "<td>" . $c["tipo"] . "<br></td> " .           
-            "<td><a href='/TRABBD/teste/Salas/edit.php?&numero=$numero&num_assentos= $num_assentos&tipo=$tipo&estabelecimento=$estabelecimento'><button class='btn btn-primary'>Editar</button></a></td>" ."</tr>";
+            "<td>" . $c["tipo"] . "<br></td> " .
+            "<td>" . $c["eid"] . "<br></td> " .
+            "<td><a href='/TRABBD/teste/Salas/edit.php?&numero=$numero&num_assentos= $num_assentos&tipo=$tipo&estabelecimento=$estabelecimento'><button class='btn btn-primary'>Editar</button></a></td>";
         }
 
         ?>
