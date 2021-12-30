@@ -59,13 +59,13 @@ if (booleanIsLogged()) {
       <div class="col border border-dark">
 
         <br>
-        <a class="d-flex justify-content-center text-center" href="index.php">Salas</a>
+        <a class="d-flex justify-content-center text-center" href="../salas/index.php">Salas</a>
         <br>
       </div>
       <div class="col border border-dark">
 
         <br>
-        <a class="d-flex justify-content-center text-center" href="Filmes/index.php">Filmes</a>
+        <a class="d-flex justify-content-center text-center" href="index.php">Filmes</a>
         <br>
       </div>
       <div class="col border border-dark">

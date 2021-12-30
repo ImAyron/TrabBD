@@ -74,7 +74,9 @@
     </div>
   </div>
   </div>
-
+  <br>
+  <?php require_once "../User/controllerLogin.php"; ?>
+      <a href="insert.php"><button class="btn btn-danger">Inserir Novo Filme</button></a>
 
   <div class="row">
 
@@ -111,15 +113,6 @@
           echo  "<tr><td>" . $c["nome_exibido"] . "</td>" .
             "<td>" . $c["diretor"] . "</td>" .
             "<td>" . $c["categorias"] . "<br></td> " .
-
-            //"<td><a href='/TRABBD/teste/Salas/controllerDelete.php?numero=$phpVariable'><button class='btn btn-secondary'> Excluir</button></a></td>" .
-            // "<td><a href='/TRABBD/teste/Salas/edit.php?
-
-
-            //<button class='btn btn-primary'>Editar</button></a></td>" .
-
-
-            
             "<td>" . "<a href='show.php?nome_original=$phpVariable&diretor=$p1&nome_exibido=$p0&sinopse=$p2&etaria=$p3&categorias=$p4&astros=$p7&data=$p5&duracao=$p6' ><button class='btn btn-primary'>Vizualizar</button></a>" . "<br></td> " .
             "<td>" . "<a href='edit.php' ><button class='btn btn-primary'>Editar</button></a>" . "<br></td> " .
             "</tr>";
@@ -128,8 +121,7 @@
         ?>
 
       </table>
-      <?php require_once "../User/controllerLogin.php"; ?>
-      <a href="insert.php"><button class="btn btn-danger">Inserir Novo Filme</button></a>
+    
     </div>
 
   </div>
