@@ -4,10 +4,6 @@ require '../dbc/index.php';
 
 
 // salas
-$tabela = $pdo->query("SELECT * FROM ingresso ");
-$ingressos =$pdo->query("SELECT count(*) FROM ingresso where vendido='true'");
+$ingressos =$pdo->query("SELECT * FROM INGRESSO ORDER BY sid,tipo");
 
 require 'view.php';
-
-
-?>

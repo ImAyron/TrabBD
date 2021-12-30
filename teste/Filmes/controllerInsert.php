@@ -2,17 +2,41 @@
 
 require 'index.php';
 
-$numero=$_POST['numero'];
-$num_assentos=$_POST['num_assentos'];
-$tipo=$_POST['tipo'];
+$nome_original = $_POST['nome_original'];
+$diretor = $_POST['diretor'];
+$nome_exibido = $_POST['nome_exibido'];
+$sinopse = $_POST['sinopse'];
+$classificação_etaria = $_POST['classificação_etaria'];
+$categorias = $_POST['categorias'];
+$astros = $_POST['astros'];
+$data_estreia = $_POST['data_estreia'];
+$duracao = $_POST['duracao'];
 
-$stmt= $pdo->prepare("INSERT INTO SALA(Numero,Num_assentos,Tipo, Eid) VALUES (:numero,:num_assentos,:tipo,'B1D48DDT1V')");
+try {
 
-$stmt->bindParam(':numero',$numero);
-$stmt->bindParam(':num_assentos',$num_assentos);
-$stmt->bindParam(':tipo',$tipo);
+    $pdo->beginTransaction();
 
-$stmt->execute();
+    $stmt = $pdo->prepare("INSERT INTO FILME (nome_original, diretor, nome_exibido, sinopse, classificação_etaria, categorias, astros, data_estreia, duracao)
+     VALUES (:nome_original, :diretor, :nome_exibido, :sinopse, :classificação_etaria, :categorias, :astros, :data_estreia, :duracao)");
+
+    $stmt->bindParam(":nome_original", $nome_original);
+    $stmt->bindParam(":diretor", $diretor);
+    $stmt->bindParam(":nome_exibido", $nome_exibido);
+    $stmt->bindParam(":sinopse", $sinopse);
+    $stmt->bindParam(":classificação_etaria", $classificação_etaria);
+    $stmt->bindParam(":categorias", $categorias);
+    $stmt->bindParam(":astros", $astros);
+    $stmt->bindParam(":data_estreia", $data_estreia);
+    $stmt->bindParam(":duracao", $duracao);
+
+
+    $stmt->execute();
+
+    $pdo->commit();
+} catch (Exception $error) {
+    $pdo->rollBack();
+    die("Erro na inserção! " . $error->getMessage());
+}
 
 header('location:index.php');
 exit();

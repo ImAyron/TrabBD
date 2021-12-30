@@ -3,15 +3,15 @@
 require 'index.php';
 
 
-$numero=$_GET['numero'];
+$id=$_GET['id'];
 
 try {
 
     $pdo->beginTransaction();
 
-    $stmt = $pdo->prepare("DELETE FROM SALA WHERE numero=:numero");
+    $stmt = $pdo->prepare("DELETE FROM ESTABELECIMENTO WHERE id=:id");
 
-    $stmt->bindParam(":numero", $numero);
+    $stmt->bindParam(":id", $id);
     $stmt->execute();
 
     $pdo->commit();
@@ -21,4 +21,7 @@ try {
 }
 
 header('location:index.php');
+
 exit();
+
+?>

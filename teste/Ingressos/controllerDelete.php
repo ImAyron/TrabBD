@@ -3,18 +3,13 @@
 require 'index.php';
 
 
-$numero=$_GET['numero'];
+$ids = $_GET['ids'];
 
 try {
+    $stmt = $pdo->prepare("DELETE FROM INGRESSO WHERE id IN (:ids)");
+    $stmt->bindParam(":ids", $ids);
 
-    $pdo->beginTransaction();
-
-    $stmt = $pdo->prepare("DELETE FROM SALA WHERE numero=:numero");
-
-    $stmt->bindParam(":numero", $numero);
     $stmt->execute();
-
-    $pdo->commit();
 } catch (Exception $error) {
     $pdo->rollBack();
     die("Erro ao deletar! " . $error->getMessage());

@@ -2,19 +2,22 @@
 
 require 'index.php';
 
-$id=$_POST['id'];
-$sid=$_POST['sid'];
-$tipo=$_POST['tipo'];
+$qntd = $_POST['quantidade'];
+$tipo = $_POST['tipo'];
+$tipo = $_POST['sid'];
 
-$stmt= $pdo->prepare("INSERT INTO SALA(Numero,Num_assentos,Tipo, Eid) VALUES (:numero,:num_assentos,:tipo,'B1D48DDT1V')");
+try {
+    for ($count = 1; $count <= $qntd; $count++) {
+        $stmt = $pdo->prepare("INSERT INTO INGRESSO (tipo, vendido,sid) VALUES (:tipo, false, :sid)");
+        $stmt->bindParam(":tipo", $tipo);
+        $stmt->bindParam(":sid", $sid);
 
-$stmt->bindParam(':id',$id);
-$stmt->bindParam(':sid',$sid);
-$stmt->bindParam(':tipo',$tipo);
-
-$stmt->execute();
+        $stmt->execute();
+    }
+} catch (Exception $error) {
+    $pdo->rollBack();
+    die("Erro na inserção! " . $error->getMessage());
+}
 
 header('location:index.php');
 exit();
-
-?>

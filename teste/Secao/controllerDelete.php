@@ -2,16 +2,18 @@
 
 require 'index.php';
 
-
-$numero=$_GET['numero'];
+$id = $_GET['id'];
 
 try {
 
     $pdo->beginTransaction();
 
-    $stmt = $pdo->prepare("DELETE FROM SALA WHERE numero=:numero");
+    $stmt = $pdo->prepare("DELETE FROM SECAO WHERE id=:id");
+    $stmt->bindParam(":id", $id);
 
-    $stmt->bindParam(":numero", $numero);
+    $stmt2 = $pdo->prepare("DELETE FROM OCORRE_EM WHERE scid=:id");
+    $stmt2->bindParam(":id", $id);
+
     $stmt->execute();
 
     $pdo->commit();
@@ -21,4 +23,5 @@ try {
 }
 
 header('location:index.php');
+
 exit();

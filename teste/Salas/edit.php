@@ -122,9 +122,10 @@ $estabelecimento = $_GET['estabelecimento'];
             <option <?php if ($tipo == '3D') echo ("selected"); ?>>3D</option>
           </select>
           <br>
-          <input class='btn btn-danger' type="submit" value="Inserir">
+          <input class='btn btn-danger' type="submit" value="Atualizar">
          
         </form>
+        <br>
         <a href="controllerDelete.php?numero=<?=$phpVariable?>"><button class='btn btn-primary'>Excluir</button></a>
       </div>
     </div>

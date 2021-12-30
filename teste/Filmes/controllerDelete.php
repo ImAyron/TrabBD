@@ -2,18 +2,25 @@
 
 require 'index.php';
 
+$nome_original = $_GET['nome_original'];
+$diretor = $_GET['diretor'];
 
-$numero=$_GET['numero'];
-echo $numero;
+try {
 
-$stmt= $pdo->prepare("DELETE FROM sala  where numero=:numero;");
+    $pdo->beginTransaction();
 
-$stmt->bindParam(':numero',$numero);
+    $stmt = $pdo->prepare("DELETE FROM FILME WHERE nome_original=:nome_original AND diretor=:diretor");
+    
+    $stmt->bindParam(":nome_original", $nome_original);
+    $stmt->bindParam(":diretor", $diretor);
+    $stmt->execute();
 
-$stmt->execute();
+    $pdo->commit();
+} catch (Exception $error) {
+    $pdo->rollBack();
+    die("Erro ao deletar! " . $error->getMessage());
+}
 
 header('location:index.php');
 
 exit();
-
-?>
