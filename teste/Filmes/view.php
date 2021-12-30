@@ -5,15 +5,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel=" stylesheet" type='text/css' href="../css/trab.css">
   <style type="text/css">
-    a{
+    a {
       text-decoration: none;
       color: white;
     }
-    a:hover{
+
+    a:hover {
       color: black;
     }
   </style>
@@ -76,19 +77,17 @@
 
 
   <div class="row">
-   
+
     <div class="col">
-    <br>
+      <br>
       <table class="table table-active table-bordered  table-striped ">
         <tr>
           <th scope="col">Nome</th>
           <th scope="col">Diretor</th>
-          <th scope="col">Sinopse</th>
+
           <th scope="col">Categoria</th>
-          <th scope="col">Duração</th>
-          <th scope="col">Etária</th>
-          <th scope="col">Atores</th>
-          <th scope="col">Exibir</th>
+
+          <th scope="col">Vizualizar</th>
 
         </tr>
 
@@ -98,25 +97,29 @@
 
         while ($c = $tabela->fetch()) {
           $phpVariable = $c["nome_original"];
-          //$num_assentos=$c["num_assentos"];
-          //$tipo=$c["tipo"];
-          
+          $p0=$c['nome_exibido'];
+          $p1=$c["diretor"];
+          $p2=$c["sinopse"];
+          $p3=$c['classificacao_etaria'];
+          $p4=$c['categorias'];
+          $p7=$c['astros'];
+          $p5=$c['data_estreia'];
+          $p6=$c['duracao'];
+
+
           echo  "<tr><td>" . $c["nome_exibido"] . "</td>" .
             "<td>" . $c["diretor"] . "</td>" .
-            "<td>" . $c["sinopse"] . "<br></td> " .
+            "<td>" . $c["categorias"] . "<br></td> " .
+
             //"<td><a href='/TRABBD/teste/Salas/controllerDelete.php?numero=$phpVariable'><button class='btn btn-secondary'> Excluir</button></a></td>" .
-           // "<td><a href='/TRABBD/teste/Salas/edit.php?
-            //numero=$phpVariable
-           // &num_assentos= $num_assentos
-           // &tipo=$tipo'>
+            // "<td><a href='/TRABBD/teste/Salas/edit.php?
 
-             //<button class='btn btn-primary'>Editar</button></a></td>" .
 
-             "<td>" . $c["categorias"] . "<br></td> " .
-             "<td>" . $c["duracao"] . "<br></td> " .
-             "<td>" . $c["classificacao_etaria"] . "<br></td> " .
-             "<td>" . $c["astros"] . "<br></td> " .
-             "<td>" . "<a href='edit.php?nome_original=$phpVariable'><button>Editar</button></a>" . "<br></td> " .
+            //<button class='btn btn-primary'>Editar</button></a></td>" .
+
+
+
+            "<td>" . "<a href='show.php?nome_original=$phpVariable&diretor=$p1&nome_exibido=$p0&sinopse=$p2&etaria=$p3&categorias=$p4&astros=$p7&data=$p5&duracao=$p6'><button>Vizualizar</button></a>" . "<br></td> " .
             "</tr>";
         }
 
@@ -126,7 +129,7 @@
       <?php require "../User/controllerLogin.php"; ?>
       <a href="insert.php"><button class="btn btn-danger">Inserir Novo Filme</button></a>
     </div>
-   
+
   </div>
 
 

@@ -2,14 +2,18 @@
 
 require 'index.php';
 
-$nome_original=$_GET['nome_original'];
+$nome_original=$_POST['nome_original'];
 
 
 
 $tabela= $pdo->query("SELECT * FROM FILME where nome_original = '$nome_original' ");
 
+$c=$tabela->fetch();
+var_dump($c['classificacao_etaria']);
 
-header('location:show.php');
+require 'show.php';
 exit();
+
+header('location:index.php');
 
 ?>
