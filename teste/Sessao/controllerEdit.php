@@ -1,6 +1,6 @@
 <?php
 
-require 'index.php';
+require_once 'index.php';
 
 $id = $_POST['id'];
 $data = $_POST['data'];
@@ -17,7 +17,7 @@ try {
 
     $pdo->beginTransaction();
 
-    $stmt = $pdo->prepare("UPDATE SECAO SET data=:data,horario=:horario,idioma=:idioma,legendado=:legendado,duracao=:duracao,fnome=:fnome,fdiretor=:fdiretor WHERE id=:id");
+    $stmt = $pdo->prepare("UPDATE SESSAO SET data=:data,horario=:horario,idioma=:idioma,legendado=:legendado,duracao=:duracao,fnome=:fnome,fdiretor=:fdiretor WHERE id=:id");
 
     $stmt->bindParam(":id", $id);
     $stmt->bindParam(":data", $data);
@@ -31,8 +31,8 @@ try {
     $stmt->execute();
 
 
-    $stmt2 = $pdo->prepare("UPDATE OCORRE_EM SET slnum=:sala WHERE scid=:secao");
-    $stmt2->bindParam(":secao",$id);
+    $stmt2 = $pdo->prepare("UPDATE OCORRE_EM SET slnum=:sala WHERE scid=:SESSAO");
+    $stmt2->bindParam(":SESSAO",$id);
     $stmt2->bindParam(":sala",$sala);
 
 

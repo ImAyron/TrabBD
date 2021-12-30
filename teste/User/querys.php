@@ -2,7 +2,7 @@
 
 function filtroTodasAsUsuarios()
 {
-    require '../dbc/index.php';
+    require_once '../dbc/index.php';
 
     $stmt = $pdo->query("SELECT * FROM USUARIOS ORDER BY email");
 
@@ -11,7 +11,7 @@ function filtroTodasAsUsuarios()
 
 function inserirUsuarios($email, $cargo)
 {
-    require '../dbc/index.php';
+    require_once '../dbc/index.php';
 
     try {
 
@@ -33,7 +33,7 @@ function inserirUsuarios($email, $cargo)
 
 function editarUsuario($email, $cargo)
 {
-    require '../dbc/index.php';
+    require_once '../dbc/index.php';
 
     try {
 
@@ -55,7 +55,7 @@ function editarUsuario($email, $cargo)
 
 function deletarUsuario($email)
 {
-    require '../dbc/index.php';
+    require_once '../dbc/index.php';
 
     try {
 

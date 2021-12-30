@@ -1,6 +1,6 @@
 <?php
 
-require 'index.php';
+require_once 'index.php';
 
 
 $numero=$_POST['numero'];
@@ -23,6 +23,10 @@ try {
     $stmt->execute();
 
     $pdo->commit();
+
+    require_once '../Ingressos/controllerInsert.php';
+
+
 } catch (Exception $error) {
     $pdo->rollBack();
     die("Erro na inserção! " . $error->getMessage());

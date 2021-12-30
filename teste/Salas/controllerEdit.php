@@ -1,6 +1,6 @@
 <?php
 
-require 'index.php';
+require_once 'index.php';
 
 
 $numero=$_POST['numero'];

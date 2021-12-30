@@ -1,6 +1,6 @@
 <?php
 
-require 'index.php';
+require_once 'index.php';
 
 $nome_original = $_POST['nome_original'];
 $diretor = $_POST['diretor'];

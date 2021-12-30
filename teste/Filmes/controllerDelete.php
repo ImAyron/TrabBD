@@ -1,6 +1,6 @@
 <?php
 
-require 'index.php';
+require_once 'index.php';
 
 $nome_original = $_GET['nome_original'];
 $diretor = $_GET['diretor'];

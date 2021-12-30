@@ -1,5 +1,5 @@
 <?php
-require "../User/controllerLogin.php";
+require_once "../User/controllerLogin.php";
 if (booleanIsLogged()) {
   header("index.php");
   isLoggedIn();
@@ -114,7 +114,7 @@ $estabelecimento = $_GET['estabelecimento'];
 
           <p></p>
           <label for="num_assentos">Número de assentos:</label>
-          <input class="form-control" type="number" placeholder="<?= $num_assentos ?>" name="num_assentos" id="num_assentos">
+          <input class="form-control" type="number" placeholder="<?= $num_assentos ?>" value="<?= $num_assentos ?>" name="num_assentos" id="num_assentos">
           <p></p>
           <label for="tipo">Tipo de sala:</label>
           <select class="form-control" name="tipo" id="tipo" default="3D">

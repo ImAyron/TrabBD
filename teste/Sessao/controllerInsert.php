@@ -1,6 +1,6 @@
 <?php
 
-require 'index.php';
+require_once 'index.php';
 
 $data = $_POST['data'];
 $horario = $_POST['horario'];
@@ -15,7 +15,7 @@ try {
 
     $pdo->beginTransaction();
 
-    $stmt1 = $pdo->prepare("INSERT INTO SECAO (data,horario,idioma,legendado,duracao,fnome,fdiretor)
+    $stmt1 = $pdo->prepare("INSERT INTO SESSAO (data,horario,idioma,legendado,duracao,fnome,fdiretor)
      VALUES (:data,:horario,:idioma,:legendado,:duracao,:fnome,:fdiretor)");
 
     $stmt1->bindParam(":data", $data);
@@ -29,7 +29,7 @@ try {
     $stmt1->execute();
 
 
-    $stmt2 = $pdo->prepare("SELECT id FROM SECAO WHERE data=:data AND horario=:horario AND fnome=:fnome
+    $stmt2 = $pdo->prepare("SELECT id FROM SESSAO WHERE data=:data AND horario=:horario AND fnome=:fnome
     EXCEPT SELECT scid FROM OCORRE_EM WHERE slnum NOT IN (:sala)");
     $stmt2->bindParam(":data", $data);
     $stmt2->bindParam(":horario", $horario);
@@ -39,13 +39,20 @@ try {
     $stmt2->execute();
 
 
-    $stmt3 = $pdo->prepare("INSERT INTO OCORRE_EM (scid,slnum) VALUES (:secao,:sala)");
-    $stmt3->bindParam(":secao",$stmt2->fetch());
+    $stmt3 = $pdo->prepare("INSERT INTO OCORRE_EM (scid,slnum) VALUES (:SESSAO,:sala)");
+    $stmt3->bindParam(":SESSAO",$stmt2->fetch());
     $stmt3->bindParam(":sala",$sala);
    
     $stmt2->execute();
 
+    $stmt4 = $pdo->prepare("SELECT slnum FROM SALA WHERE numero=:sala");
+    $stmt4->bindParam(":sala",$sala);
+   
+
     $pdo->commit();
+
+
+    addIngressos($stmt4->fetch(), "MEIA", $sala);
 
 
 } catch (Exception $error) {

@@ -1,6 +1,6 @@
 <?php
 
-require 'index.php';
+require_once 'index.php';
 
 $cep=$_POST['cep'];
 $end_num=$_POST['end_num'];
@@ -28,5 +28,3 @@ try {
 
 header('location:index.php');
 exit();
-
-?>

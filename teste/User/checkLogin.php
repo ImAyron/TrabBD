@@ -1,6 +1,6 @@
 <?php
 
-require '../dbc/index.php';
+require_once '../dbc/index.php';
 
 $user = null;
 

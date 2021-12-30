@@ -96,7 +96,7 @@
 
         <?php
 
-        while ($c = $tabela->fetch()) {
+        while ($c = $filmes->fetch()) {
           $phpVariable = $c["nome_original"];
           $p0=$c['nome_exibido'];
           $p1=$c["diretor"];
@@ -128,7 +128,7 @@
         ?>
 
       </table>
-      <?php require "../User/controllerLogin.php"; ?>
+      <?php require_once "../User/controllerLogin.php"; ?>
       <a href="insert.php"><button class="btn btn-danger">Inserir Novo Filme</button></a>
     </div>
 
