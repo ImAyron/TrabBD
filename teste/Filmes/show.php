@@ -93,9 +93,12 @@ $duracao = $_GET['duracao'];
   </div>
   </div>
   <br>
-  <h3 class="d-flex justify-content-center text-center"><?php echo $nome_exibido; ?></h1>
+ <div>
+ <h3 class="d-flex justify-content-center text-center"><?php echo $nome_exibido ;?></h1> 
+  
     <h5 class="d-flex justify-content-center text-center"><?php echo $nome_original ?></h5>
     <br>
+ </div>
 
     <div class="row">
 
@@ -133,11 +136,15 @@ $duracao = $_GET['duracao'];
             <p>
             <h6>Categorias</h6>
             </p>
-            <p><?php echo $categorias . " " . "<button class='btn btn-warning'> $etaria</button>" ?></p>
+            <p><?php echo $categorias ?></p>
             
             <h6>Sinopse</h6>
             <p><?php echo $sinopse; ?></p>
+            <p><h6>Indicação classificatória</h6></p>
+            <p><button class='btn btn-warning'><?php echo $etaria ?></button></p>
           </div>
+          
+          <a href="controllerDelete.php?nome_original=<?=$nome_original?>&diretor=<?=$diretor?>"><button class='btn btn-primary'>Excluir</button></a>
         </div>
 
 
