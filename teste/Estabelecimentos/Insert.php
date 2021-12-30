@@ -1,3 +1,14 @@
+<?php
+require_once "../User/controllerLogin.php";
+
+if (booleanIsLogged()) {
+  header("index.php");
+  isLoggedIn();
+  hasCargo("ADMIN");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,15 +20,16 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel=" stylesheet" type='text/css' href="../css/trab.css">
   <style type="text/css">
-    a{
+    a {
       text-decoration: none;
       color: white;
     }
-    a:hover{
+
+    a:hover {
       color: black;
     }
   </style>
-  <title>Document</title>
+  <title>Inserir Salas</title>
 </head>
 
 <body>
@@ -61,7 +73,7 @@
       <div class="col border border-dark">
 
         <br>
-        <a class="d-flex justify-content-center text-center" href="Ingressos/index.php">Ingressos</a>
+        <a class="d-flex justify-content-center text-center" href="../Ingressos/index.php">Ingressos</a>
         <br>
       </div>
       <div class="col border border-dark">
@@ -75,60 +87,39 @@
   </div>
 
 
+
   <div class="row">
     <div class="col">
 
     </div>
-    <div class="col-8">
-    <br></br>
-    <a href="insert.php"><button class="btn btn-primary">Inserir Novo Estabelecimento</button></a>
-    <br></br>
-      <table class="table table-active table-striped ">
-        <tr>
-          <th scope="col">ID</th>
-          <th scope="col">CEP</th>
-          <th scope="col">Número do Endereço</th>
-          <th scope="col">Número de Salas</th> 
-          <th scope="col">Telefone</th>
-          <th scope="col"></th>
-        
-
-
-        </tr>
-
-
-
-        <?php
-
-        while ($c = $estabelecimento->fetch()) {
-          $id = $c["id"];
-          $cep = $c["cep"];
-          $end_num = $c["end_num"];
-          $num_salas = $c["num_salas"];
-          $telefone = $c["telefone"];
+    <div class="col-8" style="color:black;font-weight: bold;">
+      <div class='form-group'>
+      <form action="./controllerInsert.php" method="post">
+          <br><br>
+          <label for="cep">CEP:</label>
+          <input class="form-control" type="text" name="cep" id="cep">
+          <p></p>
+          <label for="end_num">Número do Endereço:</label>
+          <input class="form-control" type="number" name="end_num" id="end_num">
+          <p></p>
+          <label for="num_salas">Número de Salas:</label>
+          <input class="form-control" type="number" name="num_salas" id="num_salas">
+          <p></p>
+          <label for="telefone">Telefone:</label>
+          <input class="form-control" type="number" name="telefone" id="telefone">
           
-          echo  "<tr><td>" . $c["id"] . "</td>" .
-            "<td>" . $c["cep"] . "</td>" .
-            "<td>" . $c["end_num"] . "<br></td> " . 
-            "<td>" . $c["num_salas"] . "<br></td>" .
-            "<td>" . $c["telefone"] . "<br></td>" . 
-            "<td><a href='/TRABBD/teste/Estabelecimento/edit.php?&cep=$cep&end_num=$end_num&num_salas=$num_salas&telefone=$telefone'><button class='btn btn-primary'>Editar</button></a></td>" . "</tr>";
+          <br>
+          <input class='btn btn-danger' type="submit" value="Atualizar">
+         
+        </form>
 
-            
-        }
-
-        ?>
-
-      </table>
+      </div>
     </div>
     <div class="col">
 
     </div>
 
   </div>
-
-
-
 
 </body>
 
