@@ -35,5 +35,6 @@ try {
     die("Erro! " . $error->getMessage());
 }
 
-header('location:index.php');
+header('location:view.php');
+
 exit();

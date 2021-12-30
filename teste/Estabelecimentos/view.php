@@ -96,9 +96,9 @@
 
         </tr>
 
-
-
         <?php
+
+        require_once "index.php";
 
         while ($c = $estabelecimento->fetch()) {
           $id = $c["id"];

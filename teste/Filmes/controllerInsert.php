@@ -38,5 +38,6 @@ try {
     die("Erro na inserção! " . $error->getMessage());
 }
 
-header('location:index.php');
+header('location:view.php');
+
 exit();
