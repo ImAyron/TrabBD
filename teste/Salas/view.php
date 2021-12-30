@@ -93,7 +93,7 @@
 
         <?php
 
-        while ($c = $tabela->fetch()) {
+        while ($c = $salas->fetch()) {
           $numero = $c["numero"];
           $num_assentos = $c["num_assentos"];
           $tipo = $c["tipo"];
