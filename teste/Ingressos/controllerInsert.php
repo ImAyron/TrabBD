@@ -1,9 +1,10 @@
 <?php 
 
 function addIngressos($qntd,$tipo,$sid){
-    require_once 'index.php';
+    require_once "../dbc/index.php";
 
     try {
+        
         for ($count = 1; $count <= $qntd; $count++) {
             $stmt = $pdo->prepare("INSERT INTO INGRESSO (tipo, vendido,sid) VALUES (:tipo, false, :sid)");
             $stmt->bindParam(":tipo", $tipo);

@@ -7,9 +7,9 @@ $horario = $_POST['horario'];
 $idioma = $_POST['idioma'];
 $legendado = $_POST['legendado'];
 $duracao = $_POST['duracao'];
-$filme = $_POST['filme'];
-$diretor = $_POST['diretor'];
-$sala = $_POST['sala'];
+$filme = explode(" - ",$_POST['filme'])[0];
+$diretor = explode(" - ",$_POST['filme'])[1];
+$sala = explode(" - ",$_POST['sala'])[1];
 
 try {
 
@@ -40,7 +40,7 @@ try {
 
 
     $stmt3 = $pdo->prepare("INSERT INTO OCORRE_EM (scid,slnum) VALUES (:SESSAO,:sala)");
-    $stmt3->bindParam(":SESSAO",$stmt2->fetch());
+    $stmt3->bindParam(":SESSAO",$stmt2->fetch()[0]);
     $stmt3->bindParam(":sala",$sala);
    
     $stmt2->execute();
@@ -51,7 +51,7 @@ try {
 
     $pdo->commit();
 
-
+    require_once "../Ingressos/controllerInsert.php";
     addIngressos($stmt4->fetch(), "MEIA", $sala);
 
 
