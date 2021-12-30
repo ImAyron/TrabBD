@@ -98,6 +98,8 @@
 
         <?php
 
+        require_once "index.php";
+
         while ($c = $filmes->fetch()) {
           $phpVariable = $c["nome_original"];
           $p0=$c['nome_exibido'];

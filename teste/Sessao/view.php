@@ -82,7 +82,7 @@
         </div>
         <div class="col-8">
             <br>
-            <?php require "../User/controllerLogin.php"; ?>
+            <?php require_once "../User/controllerLogin.php"; ?>
             <a href="insert.php"><button class="btn btn-primary">Adicionar Sessao</button></a>
             <br>
             <br>
@@ -103,6 +103,8 @@
 
                 <?php
 
+                require_once 'index.php';
+
                 if ($sessoes->fetch()) {
 
 
@@ -115,8 +117,6 @@
                         $fnome = $c["fnome"];
                         $fdiretor = $c["fdiretor"];
                         $slnum = $c["slnum"];
-
-
 
 
                         echo  "<tr>" .

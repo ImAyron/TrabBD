@@ -96,6 +96,8 @@
         </tr>
 
         <?php
+        require_once 'index.php';
+
 
         while ($c = $salas->fetch()) {
           $numero = $c["numero"];
