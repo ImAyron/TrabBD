@@ -26,25 +26,25 @@ try {
     $stmt1->bindParam(":fnome", $filme);
     $stmt1->bindParam(":fdiretor", $diretor);
 
-
     $stmt1->execute();
-    $pdo->commit();
 
-    $pdo->beginTransaction();
 
-    $stmt2 = $pdo->prepare("SELECT * FROM SECAO WHERE data=:data AND horario=:horario AND fnome=:fnome");
+    $stmt2 = $pdo->prepare("SELECT id FROM SECAO WHERE data=:data AND horario=:horario AND fnome=:fnome
+    EXCEPT SELECT scid FROM OCORRE_EM WHERE slnum NOT IN (:sala)");
     $stmt2->bindParam(":data", $data);
     $stmt2->bindParam(":horario", $horario);
     $stmt2->bindParam(":fnome", $filme);
+    $stmt2->bindParam(":sala", $sala);
+
     $stmt2->execute();
 
-    $pdo->commit();
-
-    $pdo->beginTransaction();
 
     $stmt3 = $pdo->prepare("INSERT INTO OCORRE_EM (scid,slnum) VALUES (:secao,:sala)");
     $stmt3->bindParam(":secao",$stmt2->fetch());
     $stmt3->bindParam(":sala",$sala);
+   
+    $stmt2->execute();
+
     $pdo->commit();
 
 

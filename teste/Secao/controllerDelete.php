@@ -9,8 +9,11 @@ try {
     $pdo->beginTransaction();
 
     $stmt = $pdo->prepare("DELETE FROM SECAO WHERE id=:id");
-    
     $stmt->bindParam(":id", $id);
+
+    $stmt2 = $pdo->prepare("DELETE FROM OCORRE_EM WHERE scid=:id");
+    $stmt2->bindParam(":id", $id);
+
     $stmt->execute();
 
     $pdo->commit();

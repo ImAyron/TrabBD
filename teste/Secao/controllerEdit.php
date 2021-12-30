@@ -10,6 +10,7 @@ $legendado = $_POST['legendado'];
 $duracao = $_POST['duracao'];
 $filme = $_POST['filme'];
 $diretor = $_POST['diretor'];
+$sala = $_POST['sala'];
 
 
 try {
@@ -28,6 +29,15 @@ try {
     $stmt->bindParam(":fdiretor", $diretor);
 
     $stmt->execute();
+
+
+    $stmt2 = $pdo->prepare("UPDATE OCORRE_EM SET slnum=:sala WHERE scid=:secao");
+    $stmt2->bindParam(":secao",$id);
+    $stmt2->bindParam(":sala",$sala);
+
+
+    $stmt2->execute();
+
     $pdo->commit();
 } catch (Exception $error) {
     $pdo->rollBack();
