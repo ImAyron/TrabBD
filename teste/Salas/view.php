@@ -91,12 +91,7 @@
 
         </tr>
 
-
-
         <?php
-        require "./querys.php";
-
-        $sala = filtroTodasAsSalas();
 
         while ($c = $tabela->fetch()) {
           $numero = $c["numero"];
@@ -106,8 +101,7 @@
           
           echo  "<tr><td>" . $c["numero"] . "</td>" .
             "<td>" . $c["num_assentos"] . "</td>" .
-            "<td>" . $c["tipo"] . "<br></td> " .
-            
+            "<td>" . $c["tipo"] . "<br></td> " .           
             "<td><a href='/TRABBD/teste/Salas/edit.php?&numero=$numero&num_assentos= $num_assentos&tipo=$tipo&estabelecimento=$estabelecimento'><button class='btn btn-primary'>Editar</button></a></td>" ."</tr>";
         }
 

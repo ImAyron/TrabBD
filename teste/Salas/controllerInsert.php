@@ -23,5 +23,3 @@ try {
 
 header('location:index.php');
 exit();
-
-?>

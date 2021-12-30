@@ -1,5 +1,7 @@
 <?php
-require "../User/controllerLogin.php";
+require_once "../User/controllerLogin.php";
+include_once "../Estabelecimentos/index.php";
+
 if (booleanIsLogged()) {
   header("index.php");
   isLoggedIn();
@@ -103,9 +105,21 @@ if (booleanIsLogged()) {
           <p></p>
           <label for="tipo">Tipo de sala:</label>
           <select class="form-control" name="tipo" id="tipo">
-            <option selected disabled >Selecione o tipo</option>
+            <option selected disabled>Selecione o tipo</option>
             <option value="2D">2D</option>
             <option value="3D">3D</option>
+          </select>
+          <p></p>
+          <label for="sala">Estabelecimento:</label>
+          <select class="form-control" name="sala" id="sala">
+            <option selected disabled>Selecione o tipo</option>
+            <?php
+
+            while($est = $estabelecimento->fetch()){
+
+              echo '<option class="form-control">' . $est['id'] . '</option>';
+            }
+            ?>
           </select>
           <br>
           <input class='btn btn-danger' type="submit" value="Inserir">
