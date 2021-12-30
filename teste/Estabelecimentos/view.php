@@ -113,8 +113,6 @@
         ?>
 
       </table>
-      <?php require_once "../User/controllerLogin.php"; ?>
-      <a href="insert.php"><button class="btn btn-danger">Inserir Nova Sala</button></a>
     </div>
     <div class="col">
 

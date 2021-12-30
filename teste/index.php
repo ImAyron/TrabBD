@@ -67,7 +67,7 @@
       <div class="col border border-dark">
 
         <br>
-        <a class="d-flex justify-content-center text-center" href="sessões.html">Sessões</a>
+        <a class="d-flex justify-content-center text-center" href="./Sessao/index.php">Sessões</a>
         <br>
       </div>
       <div class="col border border-dark">

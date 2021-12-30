@@ -82,6 +82,10 @@
     </div>
     <div class="col-8">
       <br>
+      <?php require_once "../User/controllerLogin.php"; ?>
+      <a href="insert.php"><button class="btn btn-primary">Inserir Nova Sala</button></a>
+      <br>
+      <br>
       <table class="table table-active table-striped ">
         <tr>
           <th scope="col">Numero</th>
@@ -109,8 +113,6 @@
         ?>
 
       </table>
-      <?php require_once "../User/controllerLogin.php"; ?>
-      <a href="insert.php"><button class="btn btn-danger">Inserir Nova Sala</button></a>
     </div>
     <div class="col">
 
