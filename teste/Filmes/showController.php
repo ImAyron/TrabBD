@@ -14,6 +14,6 @@ var_dump($c['classificacao_etaria']);
 require 'show.php';
 exit();
 
-header('location:index.php');
+
 
 ?>
