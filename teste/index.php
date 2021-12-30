@@ -70,6 +70,12 @@
         <a class="d-flex justify-content-center text-center" href="sessões.html">Sessões</a>
         <br>
       </div>
+      <div class="col border border-dark">
+
+        <br>
+        <a class="d-flex justify-content-center text-center" href="./Estabelecimentos/index.php">Estabelecimentos</a>
+        <br>
+      </div>
     </div>
   </div>
   </div>

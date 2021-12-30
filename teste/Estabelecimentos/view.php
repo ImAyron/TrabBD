@@ -95,9 +95,9 @@
 
         <?php
 
-        while ($c = $tabela->fetch()) {
+        while ($c = $estabelecimento->fetch()) {
           $id = $c["id"];
-          $cep = $c["cep"]
+          $cep = $c["cep"];
           $end_num = $c["end_num"];
           $num_salas = $c["num_salas"];
           $telefone = $c["telefone"];
