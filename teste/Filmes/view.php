@@ -116,7 +116,8 @@
             "<td>" . $c["diretor"] . "</td>" .
             "<td>" . $c["categorias"] . "<br></td> " .
             "<td>" . "<a href='show.php?nome_original=$phpVariable&diretor=$p1&nome_exibido=$p0&sinopse=$p2&etaria=$p3&categorias=$p4&astros=$p7&data=$p5&duracao=$p6' ><button class='btn btn-primary'>Vizualizar</button></a>" . "<br></td> " .
-            "<td>" . "<a href='edit.php' ><button class='btn btn-primary'>Editar</button></a>" . "<br></td> " .
+            "<td>" . "<a href='edit.php?nome_original=$phpVariable&diretor=$p1&nome_exibido=$p0&sinopse=$p2&etaria=$p3&categorias=$p4&astros=$p7&data=$p5&duracao=$p6' ><button class='btn btn-primary'>Vizualizar</button></a>" . "<br></td> " .
+           
             "</tr>";
         }
 

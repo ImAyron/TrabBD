@@ -7,6 +7,17 @@ if (booleanIsLogged()) {
 }
 
 ?>
+<?php
+$nome_original = $_GET['nome_original'];
+$diretor = $_GET['diretor'];
+$nome_exibido = $_GET['nome_exibido'];
+$sinopse = $_GET['sinopse'];
+$etaria = $_GET['etaria'];
+$categorias = $_GET['categorias'];
+$astros = $_GET['astros'];
+$data = $_GET['data'];
+$duracao = $_GET['duracao'];
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -95,31 +106,31 @@ if (booleanIsLogged()) {
         <form action="controllerInsert.php" method="post">
           <br><br>
           <label for="nome_exibido">Nome Exibido:</label>
-          <input class="form-control" type="text" name="nome_exibido" id="nome_exibido">
+          <input class="form-control" type="text" name="nome_exibido" value="<?=$nome_exibido?>">
           <p></p>
           <label for="nome_original">Nome Original:</label>
-          <input class="form-control" type="text" name="nome_original" id="nome_original">
+          <input class="form-control" type="text" name="nome_original"  value="<?=$nome_original?>">
           <p></p>
           <label for="diretor">diretor:</label>
-          <input class="form-control" type="text" name="diretor" id="diretor">
+          <input class="form-control" type="text" name="diretor" value="<?=$diretor?>">
           <p></p>
           <label for="sinopse">sinopse:</label>
-          <input class="form-control" type="text" name="sinopse" id="sinopse">
+          <input class="form-control" type="text" name="sinopse"  value="<?=$sinopse?>">
           <p></p>
           <label for="etaria">Faixa etaria:</label>
-          <input class="form-control" type="number" name="classificacao_etaria" id="etaria">
+          <input class="form-control" type="number" name="classificacao_etaria"  value="<?=$etaria?>">
           <p></p>
           <label for="astros">Astros:</label>
-          <input class="form-control" type="text" name="astros" id="astros">
+          <input class="form-control" type="text" name="astros"  value="<?=$astros?>">
           <p></p>
           <label for="astros">categorias:</label>
-          <input class="form-control" type="text" name="categorias" id="astros">
+          <input class="form-control" type="text" name="categorias"  value="<?=$categorias?>">
           <p></p>
           <label for="astros">duracao:</label>
-          <input class="form-control" type="time" name="duracao" id="astros">
+          <input class="form-control" type="time" name="duracao"  value="<?=$duracao?>">
           <p></p>
           <label for="astros">data_estreia:</label>
-          <input class="form-control" type="date" name="data_estreia" id="astros">
+          <input class="form-control" type="date" name="data_estreia"  value="<?=$data?>">
           <p></p>
 
           <!-- <label for="categorias">categorias:</label>
