@@ -50,25 +50,25 @@
       <div class="col border border-dark">
 
         <br>
-        <a class="d-flex justify-content-center text-center" href="../salas/index.php">Salas</a>
+        <a class="d-flex justify-content-center text-center" href="../salas/view.php">Salas</a>
         <br>
       </div>
       <div class="col border border-dark">
 
         <br>
-        <a class="d-flex justify-content-center text-center" href="index.php">Filmes</a>
+        <a class="d-flex justify-content-center text-center" href="view.php">Filmes</a>
         <br>
       </div>
       <div class="col border border-dark">
 
         <br>
-        <a class="d-flex justify-content-center text-center" href="Ingressos/index.php">Ingressos</a>
+        <a class="d-flex justify-content-center text-center" href="../Ingressos/view.php">Ingressos</a>
         <br>
       </div>
       <div class="col border border-dark">
 
         <br>
-        <a class="d-flex justify-content-center text-center" href="sessões.html">Sessões</a>
+        <a class="d-flex justify-content-center text-center" href="../Sessao/view.php">Sessões</a>
         <br>
       </div>
     </div>
@@ -116,7 +116,7 @@
             "<td>" . $c["diretor"] . "</td>" .
             "<td>" . $c["categorias"] . "<br></td> " .
             "<td>" . "<a href='show.php?nome_original=$phpVariable&diretor=$p1&nome_exibido=$p0&sinopse=$p2&etaria=$p3&categorias=$p4&astros=$p7&data=$p5&duracao=$p6' ><button class='btn btn-primary'>Vizualizar</button></a>" . "<br></td> " .
-            "<td>" . "<a href='edit.php?nome_original=$phpVariable&diretor=$p1&nome_exibido=$p0&sinopse=$p2&etaria=$p3&categorias=$p4&astros=$p7&data=$p5&duracao=$p6' ><button class='btn btn-primary'>Vizualizar</button></a>" . "<br></td> " .
+            "<td>" . "<a href='edit.php?nome_original=$phpVariable&diretor=$p1&nome_exibido=$p0&sinopse=$p2&etaria=$p3&categorias=$p4&astros=$p7&data=$p5&duracao=$p6' ><button class='btn btn-primary'>Editar</button></a>" . "<br></td> " .
            
             "</tr>";
         }

@@ -103,16 +103,16 @@ $duracao = $_GET['duracao'];
     </div>
     <div class="col-8" style="color:black;font-weight: bold;">
       <div class='form-group'>
-        <form action="controllerInsert.php" method="post">
+        <form action="controllerEdit.php" method="post">
           <br><br>
           <label for="nome_exibido">Nome Exibido:</label>
           <input class="form-control" type="text" name="nome_exibido" value="<?=$nome_exibido?>">
           <p></p>
           <label for="nome_original">Nome Original:</label>
-          <input class="form-control" type="text" name="nome_original"  value="<?=$nome_original?>">
+          <input disabled class="form-control" type="text" name="nome_original"  value="<?=$nome_original?>">
           <p></p>
           <label for="diretor">diretor:</label>
-          <input class="form-control" type="text" name="diretor" value="<?=$diretor?>">
+          <input disabled class="form-control" type="text" name="diretor" value="<?=$diretor?>">
           <p></p>
           <label for="sinopse">sinopse:</label>
           <input class="form-control" type="text" name="sinopse"  value="<?=$sinopse?>">
@@ -148,6 +148,7 @@ $duracao = $_GET['duracao'];
       </div>
     </div>
     <div class="col">
+      
 
     </div>
 
