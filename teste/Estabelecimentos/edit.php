@@ -1,3 +1,20 @@
+<?php
+require_once "../User/controllerLogin.php";
+
+if (booleanIsLogged()) {
+  header("index.php");
+  isLoggedIn();
+  hasCargo("ADMIN");
+}
+
+$cep=$_GET['cep'];
+$end_num=$_GET['end_num'];
+$num_salas=$_GET['num_salas'];
+$telefone=$_GET['telefone'];
+$id=$_GET['id'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,11 +35,10 @@
       color: black;
     }
   </style>
-  <title>Document</title>
+  <title>Inserir Salas</title>
 </head>
 
 <body>
-
   <div class="row">
     <div class="d-flex justify-content-center text-center col " style="background-color:white;">
       <a href="index.php"> <img class="img-thumbnail" src="../Imagens/cineControl.png" alt=""></a>
@@ -82,61 +98,43 @@
   </div>
 
 
-  </div>
-
 
   <div class="row">
     <div class="col">
 
     </div>
-    <div class="col-8">
-      <br></br>
-      <a href="insert.php"><button class="btn btn-primary">Inserir Novo Estabelecimento</button></a>
-      <br></br>
-      <table class="table table-active table-striped ">
-        <tr>
-          <th scope="col">ID</th>
-          <th scope="col">CEP</th>
-          <th scope="col">Número do Endereço</th>
-          <th scope="col">Número de Salas</th>
-          <th scope="col">Telefone</th>
-          <th scope="col"></th>
+    <div class="col-8" style="color:black;font-weight: bold;">
+      <div class='form-group'>
+        <form action="./controllerEdit.php" method="post">
+          <input type="hidden" name="id" id=""value="<?= $id ?>">
+          <br><br>
+          <label for="cep">CEP:</label>
+          <input disabled class="form-control" type="text" name="cep" id="cep" value="<?= $cep ?>">
+          <p></p>
+          <input type="hidden" value="<?= $cep ?>" name="cep" id="">
+          <label for="end_num">Número do Endereço:</label>
+          <input class="form-control" type="number" name="end_num" value="<?= $end_num ?>">
+          <p></p>
+          <label for="num_salas">Número de Salas:</label>
+          <input class="form-control" type="number" name="num_salas"  value="<?= $num_salas?>">
+          <p></p>
+          <label for="telefone">Telefone:</label>
+          <input class="form-control" type="number" name="telefone"  value="<?= $telefone ?>">
 
+          <br>
+          <input class='btn btn-danger' type="submit" value="Atualizar">
 
+        </form>
+<br>
+        <a href="controllerDelete.php?id=<?=$id?>"><button class='btn btn-primary'>Excluir</button></a>
 
-        </tr>
-
-        <?php
-
-        require_once "index.php";
-
-        while ($c = $estabelecimento->fetch()) {
-          $id = $c["id"];
-          $cep = $c["cep"];
-          $end_num = $c["end_num"];
-          $num_salas = $c["num_salas"];
-          $telefone = $c["telefone"];
-
-          echo  "<tr><td>" . $c["id"] . "</td>" .
-            "<td>" . $c["cep"] . "</td>" .
-            "<td>" . $c["end_num"] . "<br></td> " .
-            "<td>" . $c["num_salas"] . "<br></td>" .
-            "<td>" . $c["telefone"] . "<br></td>" .
-            "<td><a href='/TRABBD/teste/Estabelecimentos/edit.php?id=$id&cep=$cep&end_num=$end_num&num_salas=$num_salas&telefone=$telefone'><button class='btn btn-primary'>Editar</button></a></td>" . "</tr>";
-        }
-
-        ?>
-
-      </table>
+      </div>
     </div>
     <div class="col">
 
     </div>
 
   </div>
-
-
-
 
 </body>
 

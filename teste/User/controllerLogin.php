@@ -27,7 +27,7 @@ function hasCargo($cargo)
     if (session_id() == '') {
         session_start();
     }
-    print_r($_SESSION);
+    
     if ($_SESSION['cargo'] != $cargo) {
         echo "<script>alert('Você não possui a permissão necessária para realizar esta ação!'); location.replace('../index.php');</script>";
         exit();
