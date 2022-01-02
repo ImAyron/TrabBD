@@ -138,7 +138,7 @@ require_once "../Filmes/index.php";
 
             while ($filme = $filmes->fetch()) {
 
-              echo '<option class="form-control">'  . $filme['nome_original'] . "\t-\t"  . $filme['diretor'] . '</option>';
+              echo '<option class="form-control">'  . $filme['nome_exibido'] . "\t-\t"  . $filme['diretor'] . '</option>';
             }
             ?>
           </select>
