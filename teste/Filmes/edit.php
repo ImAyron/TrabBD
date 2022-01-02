@@ -70,25 +70,25 @@ $duracao = $_GET['duracao'];
       <div class="col border border-dark">
 
         <br>
-        <a class="d-flex justify-content-center text-center" href="../salas/index.php">Salas</a>
+        <a class="d-flex justify-content-center text-center" href="../salas/view.php">Salas</a>
         <br>
       </div>
       <div class="col border border-dark">
 
         <br>
-        <a class="d-flex justify-content-center text-center" href="index.php">Filmes</a>
+        <a class="d-flex justify-content-center text-center" href="view.php">Filmes</a>
         <br>
       </div>
       <div class="col border border-dark">
 
         <br>
-        <a class="d-flex justify-content-center text-center" href="Ingressos/index.php">Ingressos</a>
+        <a class="d-flex justify-content-center text-center" href="../Sessao/view.php">Sessões</a>
         <br>
       </div>
       <div class="col border border-dark">
 
         <br>
-        <a class="d-flex justify-content-center text-center" href="sessões.html">Sessões</a>
+        <a class="d-flex justify-content-center text-center" href="../Estabelecimentos/view.php">Estabelecimentos</a>
         <br>
       </div>
     </div>
@@ -108,12 +108,17 @@ $duracao = $_GET['duracao'];
           <label for="nome_exibido">Nome Exibido:</label>
           <input class="form-control" type="text" name="nome_exibido" value="<?=$nome_exibido?>">
           <p></p>
+
           <label for="nome_original">Nome Original:</label>
           <input disabled class="form-control" type="text" name="nome_original"  value="<?=$nome_original?>">
+          <input type="hidden" name='nome_original' value="<?=$nome_original?>">
           <p></p>
+
           <label for="diretor">diretor:</label>
           <input disabled class="form-control" type="text" name="diretor" value="<?=$diretor?>">
+          <input  type="hidden" name="diretor" value="<?=$diretor?>">
           <p></p>
+
           <label for="sinopse">sinopse:</label>
           <input class="form-control" type="text" name="sinopse"  value="<?=$sinopse?>">
           <p></p>
@@ -133,13 +138,6 @@ $duracao = $_GET['duracao'];
           <input class="form-control" type="date" name="data_estreia"  value="<?=$data?>">
           <p></p>
 
-          <!-- <label for="categorias">categorias:</label>
-          <select class="form-control" name="categorias" id="categorias">
-            <option></option>
-            <option>2D</option>
-            <option>3D</option>
-
-          </select> -->
           <br>
           <input class='btn btn-danger' type="submit" value="Inserir">
 

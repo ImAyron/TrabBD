@@ -61,25 +61,25 @@ if (booleanIsLogged()) {
       <div class="col border border-dark">
 
         <br>
-        <a class="d-flex justify-content-center text-center" href="index.php">Salas</a>
+        <a class="d-flex justify-content-center text-center" href="../Salas/view.php">Salas</a>
         <br>
       </div>
       <div class="col border border-dark">
 
         <br>
-        <a class="d-flex justify-content-center text-center" href="../Filmes/index.php">Filmes</a>
+        <a class="d-flex justify-content-center text-center" href="../Filmes/view.php">Filmes</a>
         <br>
       </div>
       <div class="col border border-dark">
 
         <br>
-        <a class="d-flex justify-content-center text-center" href="../Ingressos/index.php">Ingressos</a>
+        <a class="d-flex justify-content-center text-center" href="../Sessao/view.php">Sessões</a>
         <br>
       </div>
       <div class="col border border-dark">
 
         <br>
-        <a class="d-flex justify-content-center text-center" href="sessões.html">Sessões</a>
+        <a class="d-flex justify-content-center text-center" href="view.php">Estabelecimentos</a>
         <br>
       </div>
     </div>

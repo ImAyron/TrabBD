@@ -62,7 +62,7 @@
       <div class="col border border-dark">
 
         <br>
-        <a class="d-flex justify-content-center text-center" href="../Ingressos/view.php">Ingressos</a>
+        <a class="d-flex justify-content-center text-center" href="../Sessao/view.php">Sessões</a>
         <br>
       </div>
       <div class="col border border-dark">

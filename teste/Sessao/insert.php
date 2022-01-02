@@ -52,30 +52,30 @@ require_once "../Filmes/index.php";
       <div class="col border border-dark">
         <br>
         <a class="d-flex justify-content-center text-center" href="../index.php">Home</a>
-        <br>
-      </div>
-      <div class="col border border-dark">
+                <br>
+            </div>
+            <div class="col border border-dark">
 
-        <br>
-        <a class="d-flex justify-content-center text-center" href="index.php">Salas</a>
-        <br>
-      </div>
-      <div class="col border border-dark">
+                <br>
+                <a class="d-flex justify-content-center text-center" href="../Salas/view.php">Salas</a>
+                <br>
+            </div>
+            <div class="col border border-dark">
 
-        <br>
-        <a class="d-flex justify-content-center text-center" href="../Filmes/index.php">Filmes</a>
-        <br>
-      </div>
-      <div class="col border border-dark">
+                <br>
+                <a class="d-flex justify-content-center text-center" href="../Filmes/view.php">Filmes</a>
+                <br>
+            </div>
+            <div class="col border border-dark">
 
-        <br>
-        <a class="d-flex justify-content-center text-center" href="../Ingressos/index.php">Ingressos</a>
-        <br>
-      </div>
-      <div class="col border border-dark">
+                <br>
+                <a class="d-flex justify-content-center text-center" href="view.php">Sessões</a>
+                <br>
+            </div>
+            <div class="col border border-dark">
 
-        <br>
-        <a class="d-flex justify-content-center text-center" href="sessões.html">Sessões</a>
+                <br>
+                <a class="d-flex justify-content-center text-center" href="../Estabelecimentos/view.php">Estabelecimentos</a>
         <br>
       </div>
     </div>

@@ -23,6 +23,6 @@ if (empty($stmt)) {
   $_SESSION['email'] = $stmt['email'];
   $_SESSION['cargo'] = $stmt['cargo'];
 
-  header('location:../Salas/index.php');
+  header('location:../Salas/view.php');
 }
 

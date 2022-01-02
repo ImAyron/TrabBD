@@ -62,13 +62,13 @@
       <div class="col border border-dark">
 
         <br>
-        <a class="d-flex justify-content-center text-center" href="../Ingressos/view.php">Ingressos</a>
+        <a class="d-flex justify-content-center text-center" href="../Sessao/view.php">Sessões</a>
         <br>
       </div>
       <div class="col border border-dark">
 
         <br>
-        <a class="d-flex justify-content-center text-center" href="../Sessao/view.php">Sessões</a>
+        <a class="d-flex justify-content-center text-center" href="../Estabelecimentos/view.php">Estabelecimentos</a>
         <br>
       </div>
     </div>
@@ -76,11 +76,15 @@
   </div>
   <br>
   <?php require_once "../User/controllerLogin.php"; ?>
-      <a href="insert.php"><button class="btn btn-danger">Inserir Novo Filme</button></a>
+    
 
   <div class="row">
+    <div class="col-2">
 
+    </div>
     <div class="col">
+      <br>
+      <a href="insert.php"><button class="btn btn-primary">Inserir Novo Filme</button></a>
       <br>
       <table class="table table-active table-bordered  table-striped ">
         <tr>
@@ -125,6 +129,9 @@
 
       </table>
     
+    </div>
+    <div class="col-2">
+
     </div>
 
   </div>

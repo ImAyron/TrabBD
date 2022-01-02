@@ -68,25 +68,25 @@ $duracao = $_GET['duracao'];
       <div class="col border border-dark">
 
         <br>
-        <a class="d-flex justify-content-center text-center" href="../salas/index.php">Salas</a>
+        <a class="d-flex justify-content-center text-center" href="../salas/view.php">Salas</a>
         <br>
       </div>
       <div class="col border border-dark">
 
         <br>
-        <a class="d-flex justify-content-center text-center" href="index.php">Filmes</a>
+        <a class="d-flex justify-content-center text-center" href="view.php">Filmes</a>
         <br>
       </div>
       <div class="col border border-dark">
 
         <br>
-        <a class="d-flex justify-content-center text-center" href="../Ingressos/index.php">Ingressos</a>
+        <a class="d-flex justify-content-center text-center" href="../Sessao/view.php">Sessões</a>
         <br>
       </div>
       <div class="col border border-dark">
 
         <br>
-        <a class="d-flex justify-content-center text-center" href="sessões.html">Sessões</a>
+        <a class="d-flex justify-content-center text-center" href="../Estabelecimentos/view.php">Estabelecimentos</a>
         <br>
       </div>
     </div>
