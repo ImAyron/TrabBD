@@ -9,9 +9,7 @@ $legendado = $_POST['legendado'];
 $duracao = $_POST['duracao'];
 $filme = explode(" - ",$_POST['filme'])[0];
 $diretor = explode(" - ",$_POST['filme'])[1];
-$sala = $_POST['sala'];
-
-print_r($_POST);
+$sala = explode(" - ",$_POST['sala'])[1];
 
 try {
 
@@ -45,7 +43,7 @@ try {
     $stmt3->bindParam(":SESSAO",$stmt2->fetch()[0]);
     $stmt3->bindParam(":sala",$sala);
    
-    $stmt2->execute();   
+    $stmt3->execute();
 
     $pdo->commit();
 

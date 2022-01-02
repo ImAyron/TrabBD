@@ -100,7 +100,7 @@ require_once "../Filmes/index.php";
 
             while ($sala = $salas->fetch()) {
 
-              echo '<option class="form-control" value="$sala[numero]">'  . $sala['eid'] . "\t-\t"  . $sala['numero'] . '</option>';
+              echo '<option class="form-control" >'  . $sala['eid'] . "\t-\t"  . $sala['numero'] . '</option>';
             }
             ?>
           </select>
