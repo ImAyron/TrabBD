@@ -1,13 +1,3 @@
-<?php
-require_once "../User/controllerLogin.php";
-if (booleanIsLogged()) {
-  header("index.php");
-  isLoggedIn();
-  hasCargo("ADMIN");
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,7 +34,7 @@ if (booleanIsLogged()) {
       <?php
       require_once "../User/controllerLogin.php";
 
-      if (!booleanIsLogged()) {
+      if (booleanIsLogged()) {
       ?>
         <a style='color:black;font-weight: bold;' href="../User/logout.php">
           <p><br>Deslogar</p>

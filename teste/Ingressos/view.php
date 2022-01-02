@@ -23,7 +23,7 @@
 
 <body>
 
-<div class="row">
+  <div class="row">
     <div class="d-flex justify-content-center text-center col " style="background-color:white;">
       <a href="index.php"> <img class="img-thumbnail" src="../Imagens/cineControl.png" alt=""></a>
 
@@ -36,7 +36,7 @@
       <?php
       require_once "../User/controllerLogin.php";
 
-      if (!booleanIsLogged()) {
+      if (booleanIsLogged()) {
       ?>
         <a style='color:black;font-weight: bold;' href="../User/logout.php">
           <p><br>Deslogar</p>
@@ -80,16 +80,42 @@
 
 
   </div>
-  
-  
+
+
   </div>
 
 
   <div class="row">
     <div class="col">
 
+
     </div>
     <div class="col-8">
+      <br>
+      <form action="./controllerInsert.php" method="post">
+        <div class="row">
+          <div class="col-auto">
+            <input placeholder="Número de Ingressos" class="form-control" type="number" name="quantidade" id="quantidade">
+          </div>
+          <div class="col-3">
+            <select class="form-control" name="tipo" id="tipo">
+              <option selected disabled>Tipo de Ingressos</option>
+              <option value="MEIA">MEIA</option>
+              <option value="INTEIRA">INTEIRA</option>
+            </select>
+          </div>
+
+          <div class="col-1">
+            <input hidden type="text" name="sid" id="sid" value="<?= $_GET["id"] ?>">
+          </div>
+
+          <div class="col-2">
+            <input class='btn btn-primary' type="submit" value="Inserir Ingressos">
+          </div>
+
+        </div>
+      </form>
+
       <br>
       <table class="table table-active table-striped ">
         <tr>
@@ -114,7 +140,7 @@
             echo  "<tr><td>" . $c["id"] . "</td>" .
               "<td>" . $c["tipo"] . "</td>" .
               "<td>" . ($c["vendido"] ? "Sim" : "Não") . "<br></td> " .
-              "<td><a href='/TRABBD/teste/Ingressos/edit.php'><button class='btn btn-danger'>Excluir</button></a></td>";
+              "<td><a href='/TRABBD/teste/Ingressos/controllerDelete.php?sessao=$sid&ids=$id'><button class='btn btn-danger'>Excluir</button></a></td>";
           }
         } else {
           echo  "<tr><td>" . "Nenhum dado encontrado" . "</td><td><td><td></tr>";

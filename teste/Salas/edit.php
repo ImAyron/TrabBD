@@ -1,17 +1,8 @@
 <?php
-require_once "../User/controllerLogin.php";
-if (booleanIsLogged()) {
-  header("index.php");
-  isLoggedIn();
-  hasCargo("ADMIN");
-}
-
 $num_assentos = $_GET['num_assentos'];
 $numero = $_GET['numero'];
 $tipo = $_GET['tipo'];
 $estabelecimento = $_GET['estabelecimento'];
-
-
 ?>
 
 <!DOCTYPE html>
@@ -53,7 +44,7 @@ $estabelecimento = $_GET['estabelecimento'];
       <?php
       require_once "../User/controllerLogin.php";
 
-      if (!booleanIsLogged()) {
+      if (booleanIsLogged()) {
       ?>
         <a style='color:black;font-weight: bold;' href="../User/logout.php">
           <p><br>Deslogar</p>

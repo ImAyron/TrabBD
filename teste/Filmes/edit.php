@@ -1,13 +1,4 @@
 <?php
-require_once "../User/controllerLogin.php";
-if (booleanIsLogged()) {
-  header("index.php");
-  isLoggedIn();
-  hasCargo("ADMIN");
-}
-
-?>
-<?php
 $nome_original = $_GET['nome_original'];
 $diretor = $_GET['diretor'];
 $nome_exibido = $_GET['nome_exibido'];
@@ -55,7 +46,7 @@ $duracao = $_GET['duracao'];
       <?php
       require_once "../User/controllerLogin.php";
 
-      if (!booleanIsLogged()) {
+      if (booleanIsLogged()) {
       ?>
         <a style='color:black;font-weight: bold;' href="../User/logout.php">
           <p><br>Deslogar</p>
