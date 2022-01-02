@@ -22,9 +22,9 @@
 </head>
 
 <body>
-<div class="row">
+  <div class="row">
     <div class="d-flex justify-content-center text-center col " style="background-color:white;">
-      <a href="index.php"> <img class="img-thumbnail" src="../Imagens/cineControl.png" alt=""></a>
+      <a href="../index.php"> <img class="img-thumbnail" src="../Imagens/cineControl.png" alt=""></a>
 
     </div>
 
@@ -105,8 +105,9 @@
           <select class="form-control" name="sala" id="sala">
             <option selected disabled>Selecione o tipo</option>
             <?php
+            include_once "../Estabelecimentos/index.php";
 
-            while($est = $estabelecimento->fetch()){
+            while ($est = $estabelecimento->fetch()) {
 
               echo '<option class="form-control">' . $est['id'] . '</option>';
             }

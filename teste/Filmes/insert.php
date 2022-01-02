@@ -23,7 +23,7 @@
 <body>
   <div class="row">
     <div class="d-flex justify-content-center text-center col " style="background-color:white;">
-      <a href="index.php"> <img class="img-thumbnail" src="../Imagens/cineControl.png" alt=""></a>
+      <a href="../index.php"> <img class="img-thumbnail" src="../Imagens/cineControl.png" alt=""></a>
 
     </div>
 

@@ -33,7 +33,7 @@ $estabelecimento = $_GET['estabelecimento'];
 
   <div class="row">
     <div class="d-flex justify-content-center text-center col " style="background-color:white;">
-      <a href="index.php"> <img class="img-thumbnail" src="../Imagens/cineControl.png" alt=""></a>
+      <a href="../index.php"> <img class="img-thumbnail" src="../Imagens/cineControl.png" alt=""></a>
 
     </div>
 
@@ -110,7 +110,7 @@ $estabelecimento = $_GET['estabelecimento'];
 
           <p></p>
           <label for="num_assentos">Número de assentos:</label>
-          <input class="form-control" type="number" placeholder="<?= $num_assentos ?>" value="<?= $num_assentos ?>" name="num_assentos" id="num_assentos">
+          <input class="form-control" type="number" placeholder="<?= $num_assentos ?>" value=<?= $num_assentos ?> name="num_assentos" id="num_assentos">
           <p></p>
           <label for="tipo">Tipo de sala:</label>
           <select class="form-control" name="tipo" id="tipo" default="3D">

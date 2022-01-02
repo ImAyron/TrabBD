@@ -26,7 +26,7 @@
 
     <div class="row">
         <div class="d-flex justify-content-center text-center col " style="background-color:white;">
-            <a href="index.php"> <img class="img-thumbnail" src="../Imagens/cineControl.png" alt=""></a>
+            <a href="../index.php"> <img class="img-thumbnail" src="../Imagens/cineControl.png" alt=""></a>
 
         </div>
 
@@ -90,7 +90,7 @@
         <div class="col">
 
         </div>
-        <div class="col-8">
+        <div class="col-10">
             <br>
             <?php require_once "../User/controllerLogin.php"; ?>
             <a href="insert.php"><button class="btn btn-primary">Adicionar Sessao</button></a>

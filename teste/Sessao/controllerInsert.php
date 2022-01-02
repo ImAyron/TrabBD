@@ -9,7 +9,9 @@ $legendado = $_POST['legendado'];
 $duracao = $_POST['duracao'];
 $filme = explode(" - ",$_POST['filme'])[0];
 $diretor = explode(" - ",$_POST['filme'])[1];
-$sala = explode(" - ",$_POST['sala'])[1];
+$sala = $_POST['sala'];
+
+print_r($_POST);
 
 try {
 
@@ -43,17 +45,9 @@ try {
     $stmt3->bindParam(":SESSAO",$stmt2->fetch()[0]);
     $stmt3->bindParam(":sala",$sala);
    
-    $stmt2->execute();
-
-    $stmt4 = $pdo->prepare("SELECT slnum FROM SALA WHERE numero=:sala");
-    $stmt4->bindParam(":sala",$sala);
-   
+    $stmt2->execute();   
 
     $pdo->commit();
-
-    require_once "../Ingressos/controllerInsert.php";
-    addIngressos($stmt4->fetch(), "MEIA", $sala);
-
 
 } catch (Exception $error) {
     $pdo->rollBack();
