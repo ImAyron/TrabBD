@@ -42,7 +42,7 @@ $estabelecimento = $_GET['estabelecimento'];
 
   <div class="row">
     <div class="d-flex justify-content-center text-center col " style="background-color:white;">
-      <a href="index.php"> <img class="img-thumbnail" src="../imagens/cineControl.png" alt=""></a>
+      <a href="index.php"> <img class="img-thumbnail" src="../Imagens/cineControl.png" alt=""></a>
 
     </div>
 
@@ -50,11 +50,20 @@ $estabelecimento = $_GET['estabelecimento'];
 
     </div>
     <div class=" col" style="background-color: white;">
-      <a style='color:black;font-weight: bold;' href="./User/logout.php">
-        <p><br>Deslogar</p>
-      </a>
+      <?php
+      require_once "../User/controllerLogin.php";
 
+      if (!booleanIsLogged()) {
+      ?>
+        <a style='color:black;font-weight: bold;' href="../User/logout.php">
+          <p><br>Deslogar</p>
+        </a>
+      <?php
+      }
+      ?>
     </div>
+
+
   </div>
   <div class="col " style="background-color: grey;">
 
@@ -62,35 +71,31 @@ $estabelecimento = $_GET['estabelecimento'];
 
       <div class="col border border-dark">
         <br>
-        <a class="d-flex justify-content-center text-center" href="../index.php">Home</a>
-        <br>
-      </div>
-      <div class="col border border-dark">
-
-        <br>
-        <a class="d-flex justify-content-center text-center" href="view.php">Salas</a>
-        <br>
-      </div>
-      <div class="col border border-dark">
-
-        <br>
         <a class="d-flex justify-content-center text-center" href="../Filmes/view.php">Filmes</a>
         <br>
       </div>
-      <div class="col border border-dark">
 
+      <div class="col border border-dark">
         <br>
         <a class="d-flex justify-content-center text-center" href="../Sessao/view.php">Sessões</a>
         <br>
       </div>
-      <div class="col border border-dark">
 
+      <div class="col border border-dark">
+        <br>
+        <a class="d-flex justify-content-center text-center" href="../Salas/view.php">Salas</a>
+        <br>
+      </div>
+
+      <div class="col border border-dark">
         <br>
         <a class="d-flex justify-content-center text-center" href="../Estabelecimentos/view.php">Estabelecimentos</a>
         <br>
       </div>
+
     </div>
-  </div>
+
+
   </div>
 
 
@@ -103,14 +108,14 @@ $estabelecimento = $_GET['estabelecimento'];
         <form action="./controllerEdit.php" method="post">
           <br><br>
           <label for="numero">Número da sala:</label>
-          <input disabled class="form-control" type="number" value= "<?=$numero ?>" placeholder="<?= $numero ?>"  id="numero">
-              
-                   <?php
-                    
-                     $phpVariable = $_GET['numero'];
-                     
-                   ?>
-                    <input type="hidden" name="numero" value="<?=$phpVariable?>" />
+          <input disabled class="form-control" type="number" value="<?= $numero ?>" placeholder="<?= $numero ?>" id="numero">
+
+          <?php
+
+          $phpVariable = $_GET['numero'];
+
+          ?>
+          <input type="hidden" name="numero" value="<?= $phpVariable ?>" />
 
           <p></p>
           <label for="num_assentos">Número de assentos:</label>
@@ -123,10 +128,10 @@ $estabelecimento = $_GET['estabelecimento'];
           </select>
           <br>
           <input class='btn btn-danger' type="submit" value="Atualizar">
-         
+
         </form>
         <br>
-        <a href="controllerDelete.php?numero=<?=$phpVariable?>"><button class='btn btn-primary'>Excluir</button></a>
+        <a href="controllerDelete.php?numero=<?= $phpVariable ?>"><button class='btn btn-primary'>Excluir</button></a>
       </div>
     </div>
     <div class="col">

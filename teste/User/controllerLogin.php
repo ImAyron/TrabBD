@@ -6,9 +6,9 @@ function booleanIsLogged()
         session_start();
     }
     if (!isset($_SESSION['cargo']) || empty($_SESSION['cargo'])) {
-        return true;
+        return false;
     }
-    return false;
+    return true;
 }
 
 function isLoggedIn()
