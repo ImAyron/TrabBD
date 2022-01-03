@@ -6,7 +6,7 @@ require_once 'index.php';
 $numero=$_POST['numero'];
 $num_assentos=$_POST['num_assentos'];
 $tipo=$_POST['tipo'];
-$eid=$_POST['sala'];
+$eid=$_POST['estabelecimento'];
 
 
 try {

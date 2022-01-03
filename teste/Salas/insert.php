@@ -102,7 +102,7 @@
           </select>
           <p></p>
           <label for="sala">Estabelecimento:</label>
-          <select class="form-control" name="sala" id="sala">
+          <select class="form-control" name="estabelecimento" id="estabelecimento">
             <option selected disabled>Selecione o tipo</option>
             <?php
             include_once "../Estabelecimentos/index.php";
