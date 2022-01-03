@@ -2,7 +2,7 @@
 
 Introdução
 
-Para a realização desse trabalho utilizamos da linguagem orientada a objetos <a href='https://www.php.net/'> PHP </a> emulada em um servidor local(XAMPP), com auxilio do SGBD(PostgreSQL), a parte visual foi desenvolvida com HTML 5, CSS e algumas API's visuais sendo as principais <a href='https://getbootstrap.com/'> Bootstrap </a> e <a href='https://fontawesome.com/'> Fontawesome </a>.
+Para a realização desse trabalho utilizamos da linguagem orientada a objetos <a href='https://www.php.net/'> PHP </a> emulada em um servidor local(XAMPP), com auxilio do SGBD( <a href='https://www.postgresql.org/'>PostgreSQL</a>), a parte visual foi desenvolvida com HTML 5, CSS e algumas API's visuais sendo as principais <a href='https://getbootstrap.com/'> Bootstrap </a> e <a href='https://fontawesome.com/'> Fontawesome </a>.
 
 <h3>Para utilização</h3>
 
