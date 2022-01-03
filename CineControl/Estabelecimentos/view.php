@@ -122,8 +122,7 @@
             "<td>" . $c["end_num"] . "<br></td> " .
             "<td>" . $c["num_salas"] . "<br></td>" .
             "<td>" . $c["telefone"] . "<br></td>" .
-            "<td><a href='/TRABBD/CineControl
-/Estabelecimentos/edit.php?id=$id&cep=$cep&end_num=$end_num&num_salas=$num_salas&telefone=$telefone'><button class='btn btn-primary'>Editar</button></a></td>" . "</tr>";
+            "<td><a href='../Estabelecimentos/edit.php?id=$id&cep=$cep&end_num=$end_num&num_salas=$num_salas&telefone=$telefone'><button class='btn btn-primary'>Editar</button></a></td>" . "</tr>";
         }
 
         ?>
