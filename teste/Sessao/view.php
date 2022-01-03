@@ -94,6 +94,7 @@
             <br>
             <?php require_once "../User/controllerLogin.php"; ?>
             <a href="insert.php"><button class="btn btn-primary">Adicionar Sessao</button></a>
+            <a href="../Estatisticas/Estatisticas.php"><button class="btn btn-primary">Estatisticas</button></a>
             <br>
             <br>
 
@@ -107,6 +108,7 @@
                     <th scope="col">Legendado</th>
                     <th scope="col">Duração</th>
                     <th scope="col">Sala</th>
+                    <th scope="col"></th>
                     <th scope="col"></th>
 
                 </tr>
@@ -138,7 +140,8 @@
                             "<td>" . ($c["legendado"] ? "Sim" : "Não") . "<br></td>" .
                             "<td>" . $c["duracao"] . "<br></td>" .
                             "<td>" . $c["slnum"] . "<br></td>" .
-                            "<td><a href='/TRABBD/teste/Ingressos/view.php?&id=$id'><button class='btn btn-primary'>Ver Ingressos</button></a></td>";
+                            "<td><a href='/TRABBD/teste/Ingressos/view.php?&id=$id'><button class='btn btn-primary'>Ver Ingressos</button></a></td>".
+                            "<td><a href='/TRABBD/teste/Sessao/controllerDelete.php?&id=$id'><button class='btn btn-danger'>Excluir</button></a></td>";
 
                         "</tr>";
                     }
