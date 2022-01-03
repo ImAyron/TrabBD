@@ -140,8 +140,8 @@
                             "<td>" . ($c["legendado"] ? "Sim" : "Não") . "<br></td>" .
                             "<td>" . $c["duracao"] . "<br></td>" .
                             "<td>" . $c["slnum"] . "<br></td>" .
-                            "<td><a href='/TRABBD/teste/Ingressos/view.php?&id=$id'><button class='btn btn-primary'>Ver Ingressos</button></a></td>".
-                            "<td><a href='/TRABBD/teste/Sessao/controllerDelete.php?&id=$id'><button class='btn btn-danger'>Excluir</button></a></td>";
+                            "<td><a href='../Ingressos/view.php?&id=$id'><button class='btn btn-primary'>Ver Ingressos</button></a></td>".
+                            "<td><a href='./controllerDelete.php?&id=$id'><button class='btn btn-danger'>Excluir</button></a></td>";
 
                         "</tr>";
                     }

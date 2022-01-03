@@ -19,5 +19,6 @@ Para a realização desse trabalho utilizamos da linguagem orientada a objetos <
 
 <h4>Passo 3(Executando a aplicação):</h4>
 
-1° Utilize um navegador e acesse o localhost/trabBd/teste onde trabBd é o nome dado ao seu repositório 
+1° Utilize um navegador e acesse o localhost/trabBd/CineControl
+ onde trabBd é o nome dado ao seu repositório 
 

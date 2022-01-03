@@ -140,7 +140,8 @@
             echo  "<tr><td>" . $c["id"] . "</td>" .
               "<td>" . $c["tipo"] . "</td>" .
               "<td>" . ($c["vendido"] ? "Sim" : "Não") . "<br></td> " .
-              "<td><a href='/TRABBD/teste/Ingressos/controllerDelete.php?sessao=$sid&ids=$id'><button class='btn btn-danger'>Excluir</button></a></td>";
+              "<td><a href='/TRABBD/CineControl
+/Ingressos/controllerDelete.php?sessao=$sid&ids=$id'><button class='btn btn-danger'>Excluir</button></a></td>";
           }
         } else {
           echo  "<tr><td>" . "Nenhum dado encontrado" . "</td><td><td><td></tr>";

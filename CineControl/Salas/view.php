@@ -119,7 +119,8 @@
             "<td>" . $c["num_assentos"] . "</td>" .
             "<td>" . $c["tipo"] . "<br></td> " .
             "<td>" . $c["eid"] . "<br></td> " .
-            "<td><a href='/TRABBD/teste/Salas/edit.php?&numero=$numero&num_assentos= $num_assentos&tipo=$tipo&estabelecimento=$estabelecimento'><button class='btn btn-primary'>Editar</button></a></td>";
+            "<td><a href='/TRABBD/CineControl
+/Salas/edit.php?&numero=$numero&num_assentos= $num_assentos&tipo=$tipo&estabelecimento=$estabelecimento'><button class='btn btn-primary'>Editar</button></a></td>";
         }
 
         ?>
