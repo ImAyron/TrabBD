@@ -96,8 +96,8 @@
         <div class="row">
           <div class="col"></div>
           <div class="col-10">
-            <h3>Melhores Diretores <i class="fas fa-trophy"></i></h3>
-            <table  class="table table-active table-striped ">
+            <h3 style="color: #ef481f;">Melhores Diretores <i class="fas fa-trophy"></i></h3>
+            <table  class="table table-bordered table-warning table-active table-striped ">
             
             
             <tr>
@@ -139,11 +139,11 @@
         <div class="row">
           <div class="col"></div>
           <div class="col-10">
-            <h3>Melhores Diretores <i class="fas fa-trophy"></i></h3>
-            <table  class="table table-active table-striped ">
+            <h3 style="color: #ef481f;">Melhores Diretores <i class="fas fa-trophy"></i></h3>
+            <table  class="table table-bordered table-active table-active table-striped ">
             
             
-            <tr>
+            <tr >
                     <th scope="col">Filme</th>
                     <th scope="col">Diretor</th>
                     <th scope="col">Data</th>
@@ -182,8 +182,8 @@
         <div class="row">
           <div class="col"></div>
           <div class="col-10">
-            <h3>Melhores Filmes<i class="fas fa-trophy"></i></h3>
-            <table  class="table table-active table-striped ">
+            <h3 style="color: #ef481f;">Melhores Filmes<i class="fas fa-trophy"></i></h3>
+            <table  class="table table-bordered table-danger table-active table-striped ">
             
             
             <tr>
