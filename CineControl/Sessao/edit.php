@@ -136,7 +136,7 @@ require_once "../Filmes/index.php";
             ?>
           </select>
           <br>
-          <input class='btn btn-danger' type="submit" value="Inserir">
+          <input class='btn btn-danger' type="submit" value="Atualizar">
 
         </form>
 

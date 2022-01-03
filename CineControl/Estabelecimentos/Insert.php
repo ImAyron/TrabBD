@@ -103,7 +103,7 @@
           <input class="form-control" type="number" name="telefone" id="telefone">
 
           <br>
-          <input class='btn btn-danger' type="submit" value="Atualizar">
+          <input class='btn btn-danger' type="submit" value="Inserir">
 
         </form>
 

@@ -115,16 +115,8 @@
           <label for="astros">data_estreia:</label>
           <input class="form-control" type="date" name="data_estreia" id="astros">
           <p></p>
-
-          <!-- <label for="categorias">categorias:</label>
-          <select class="form-control" name="categorias" id="categorias">
-            <option></option>
-            <option>2D</option>
-            <option>3D</option>
-
-          </select> -->
           <br>
-          <input class='btn btn-danger' type="submit" value="Inserir">
+          <input class='btn btn-danger' type="submit" value="Atualizar">
 
         </form>
 
