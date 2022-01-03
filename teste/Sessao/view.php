@@ -94,7 +94,7 @@
             <br>
             <?php require_once "../User/controllerLogin.php"; ?>
             <a href="insert.php"><button class="btn btn-primary">Adicionar Sessao</button></a>
-            <a href="../Estatisticas/Estatisticas.php"><button class="btn btn-primary">Estatisticas</button></a>
+           
             <br>
             <br>
 
