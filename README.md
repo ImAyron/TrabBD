@@ -14,10 +14,10 @@ Para a realização desse trabalho utilizamos da linguagem orientada a objetos <
 
 <h4>Passo 2(Configurando o SGBD):</h4>
 
-1° Inicie o servidor apache
+1° Faça um backup do arquivo de banco de dados cineControl que já está povoado
 <br>2° Configure o arquivo index.php localizado na pasta dbc com os dados do seu PostgreSQL
 
-<h4>Executando a aplicação</h4>
+<h4>Passo 3(Executando a aplicação):</h4>
 
 1° Utilize um navegador e acesse o localhost/trabBd/teste onde trabBd é o nome dado ao seu repositório 
 
