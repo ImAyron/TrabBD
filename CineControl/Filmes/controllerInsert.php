@@ -16,8 +16,9 @@ try {
 
     $pdo->beginTransaction();
 
-    $stmt = $pdo->prepare("INSERT INTO FILME (nome_original, diretor, nome_exibido, sinopse, classificacao_etaria, categorias, astros, data_estreia, duracao)
-     VALUES (:nome_original, :diretor, :nome_exibido, :sinopse, :classificacao_etaria, :categorias, :astros, :data_estreia, :duracao)");
+    $stmt = $pdo->prepare("INSERT INTO FILME (nome_original, diretor, nome_exibido, sinopse, classificacao_etaria, 
+    categorias, astros, data_estreia, duracao)VALUES (:nome_original, :diretor, :nome_exibido, :sinopse,
+    :classificacao_etaria, :categorias, :astros, :data_estreia, :duracao)");
 
     $stmt->bindParam(":nome_original", $nome_original);
     $stmt->bindParam(":diretor", $diretor);

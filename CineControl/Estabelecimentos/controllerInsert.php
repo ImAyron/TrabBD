@@ -11,7 +11,8 @@ try {
 
     $pdo->beginTransaction();
 
-    $stmt = $pdo->prepare("INSERT INTO ESTABELECIMENTO ( cep, end_num, num_salas, telefone) VALUES (:cep, :end_num, :num_salas, :telefone)");
+    $stmt = $pdo->prepare("INSERT INTO ESTABELECIMENTO ( cep, end_num, num_salas, telefone) 
+    VALUES (:cep, :end_num, :num_salas, :telefone)");
 
     $stmt->bindParam(":cep", $cep);
    

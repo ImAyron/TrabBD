@@ -16,7 +16,10 @@ try {
 
     $pdo->beginTransaction();
 
-    $stmt = $pdo->prepare("UPDATE FILME SET nome_exibido=:nome_exibido,sinopse=:sinopse,classificacao_etaria=:classificacao_etaria,categorias=:categorias,astros=:astros,data_estreia=:data_estreia,duracao=:duracao WHERE nome_original=:nome_original AND diretor=:diretor");
+    $stmt = $pdo->prepare("UPDATE FILME 
+    SET nome_exibido=:nome_exibido,sinopse=:sinopse,classificacao_etaria=:classificacao_etaria,
+    categorias=:categorias,astros=:astros,data_estreia=:data_estreia,duracao=:duracao 
+    WHERE nome_original=:nome_original AND diretor=:diretor");
 
     $stmt->bindParam(":nome_original", $nome_original);
     $stmt->bindParam(":diretor", $diretor);

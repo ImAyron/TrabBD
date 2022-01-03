@@ -13,7 +13,8 @@ try {
 
     $pdo->beginTransaction();
 
-    $stmt = $pdo->prepare("UPDATE ESTABELECIMENTO SET cep=:cep, end_num=:end_num, num_salas=:num_salas, telefone=:telefone WHERE id=:id");
+    $stmt = $pdo->prepare("UPDATE ESTABELECIMENTO SET cep=:cep, end_num=:end_num, num_salas=:num_salas, telefone=:telefone
+    WHERE id=:id");
 
     $stmt->bindParam(":id", $id);
     $stmt->bindParam(":cep", $cep);

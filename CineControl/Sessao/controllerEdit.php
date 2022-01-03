@@ -17,7 +17,9 @@ try {
 
     $pdo->beginTransaction();
 
-    $stmt = $pdo->prepare("UPDATE SESSAO SET data=:data,horario=:horario,idioma=:idioma,legendado=:legendado,duracao=:duracao,fnome=:fnome,fdiretor=:fdiretor WHERE id=:id");
+    $stmt = $pdo->prepare("UPDATE SESSAO 
+    SET data=:data,horario=:horario,idioma=:idioma,legendado=:legendado,duracao=:duracao,fnome=:fnome,fdiretor=:fdiretor
+     WHERE id=:id");
 
     $stmt->bindParam(":id", $id);
     $stmt->bindParam(":data", $data);
